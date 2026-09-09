@@ -4,6 +4,8 @@ A new portfolio for Abdelilah Wajid, Product Engineer in Marrakech, Morocco. The
 
 **Status: Phase 0 documentation and repository foundation. There is no website application, deployment or application test result yet.** This repository starts with a new Git history; no application code or history was imported from the previous portfolio.
 
+Public repository: [kanata-kan/abdelilah-wajid-portfolio](https://github.com/kanata-kan/abdelilah-wajid-portfolio), created with the owner's explicit authorization on September 9, 2026. The default branch is `main`.
+
 English is the primary site language. Arabic is a complete second locale with genuine RTL layout. The adopted homepage design and exact bilingual copy are preserved as versioned contracts.
 
 ## Start here

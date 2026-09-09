@@ -24,7 +24,7 @@ See [PHASE-0-VERIFICATION](PHASE-0-VERIFICATION.md) for actual checks and Git ev
 ## Limits and pending inputs
 
 - Exact requested design `(1)` archive, current-state `(6)` and source-register `(2)` revisions were unavailable. The recovered September 8 design v1.0.0 was read and its 213 manifest entries verified; equivalence to the missing archive is not established.
-- Remote destination and Public visibility are owner-approved; actual creation/push verification is recorded in PHASE-0-VERIFICATION. Code license is undecided. Local repo folder: `abdelilah-wajid-portfolio`.
+- The public GitHub repository `kanata-kan/abdelilah-wajid-portfolio` was created and pushed on September 9. GitHub reports Public visibility and `main` as the default branch. A clean GitHub clone passed the documentation checks; evidence is recorded in PHASE-0-VERIFICATION. Code license is undecided. Local repo folder: `abdelilah-wajid-portfolio`.
 - Root behavior, case-study slugs and `x-default` are recorded proposals, not silently finalized routes.
 - Real portrait/secondary captures, final contact/profile URLs, case-study layout/evidence scope, host/origin/crawler policy and migration inventory remain assigned in [OPEN-DECISIONS](OPEN-DECISIONS.md).
 
