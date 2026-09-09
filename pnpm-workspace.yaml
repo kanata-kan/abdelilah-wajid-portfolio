@@ -1,0 +1,5 @@
+minimumReleaseAge: 1440
+strictPeerDependencies: true
+allowBuilds:
+  unrs-resolver@1.12.2: true
+  sharp@0.35.4: true

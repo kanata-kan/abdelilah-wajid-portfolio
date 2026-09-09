@@ -1,0 +1,8 @@
+@import '../../docs/design/v1.0/05-implementation/layout-contract.css';
+
+:root { --ui-font: var(--font-inter), sans-serif; }
+:root:lang(ar) { --ui-font: var(--font-arabic), sans-serif; }
+body { font-synthesis: none; }
+.latin { font-family: var(--font-inter), sans-serif; }
+.skip-link { position: absolute; inset-inline-start: var(--gutter); inset-block-start: 8px; transform: translateY(-200%); padding: 12px; background: var(--aw-ivory); }
+.skip-link:focus { transform: translateY(0); }
