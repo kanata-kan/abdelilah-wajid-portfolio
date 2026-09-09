@@ -4,7 +4,7 @@ Updated: 2026-09-09. Session began 2026-09-08. Owner: Abdelilah Wajid.
 
 ## Phase and authority
 
-**Phase 1 in progress, authorized on 2026-09-09; D01 closed by explicit owner adoption of the available baseline.** Phase 0 repository and documentation are delivered. The latest owner request authorizes Phase 1 only in this existing repository, after resolving D01; it does not authorize later phases, site publication, DNS changes or spending. On September 9 the owner also explicitly authorized the public GitHub repository `kanata-kan/abdelilah-wajid-portfolio`.
+**Phase 1 foundation complete; automated Gate 1 passed on 2026-09-09.** Browser visual/click inspection could not run because no browser surface was available. D01 is closed by explicit owner adoption of the available baseline. The latest owner request authorizes Phase 1 only; later phases, site publication, DNS changes and spending remain separate. The public GitHub repository destination was already authorized on September 9.
 
 This is the current repository handoff, distinct from the September 6 “Phase 0 complete” that described ChatGPT project setup. The current owner request and September 8 adopted homepage design supersede that older backlog.
 
@@ -19,7 +19,7 @@ This is the current repository handoff, distinct from the September 6 “Phase 0
 
 All requested documents, three ADRs, concise AGENTS guidance, open-decision register, rights separation, original logo/icons, exact copy/tokens/layout/fonts, source/import fingerprints and a dependency-free documentation integrity checker. Full original design/evidence and project snapshots are preserved in a separate local handoff outside Git.
 
-See [PHASE-0-VERIFICATION](PHASE-0-VERIFICATION.md) for actual checks and Git evidence. Application dependencies, lockfile, framework scaffold, CI, media playback and browser/site tests have not been performed. The version table records September 8 vendor/registry observations, not installed versions.
+Phase 1 adds a pinned Next/React/strict TypeScript/pnpm application, real lockfile, static EN/AR shell, original SVG/icons/local fonts, server-only frozen dictionaries, locale and metadata helpers, preview noindex policy, focused tests and read-only CI configuration. A clean dependency install, full check command and production HTTP tests passed. See [PHASE-1-VERIFICATION](PHASE-1-VERIFICATION.md) for exact versions, the compatibility fix and actual results; [PHASE-0-VERIFICATION](PHASE-0-VERIFICATION.md) preserves earlier evidence. No hosted CI, browser visual review, case-media playback or deployment result is claimed.
 
 ## Limits and pending inputs
 
@@ -30,9 +30,9 @@ See [PHASE-0-VERIFICATION](PHASE-0-VERIFICATION.md) for actual checks and Git ev
 
 ## Next step
 
-D01 is closed by owner decision, while equivalence to missing revisions remains unverified. Recheck stable versions and implement the smallest locale-aware foundation with real checks. Do not reopen adopted visual direction, the approved GitHub destination or discovery questions already answered.
+Review the private shell at `http://127.0.0.1:3000/en/` or `/ar/` while the local server is running; restart with `node scripts/pnpm-local.mjs start` (or `dev`) if needed. Phase 2 homepage implementation needs the owner's next phase instruction. Resolve D02 before adding root/case/x-default behavior; keep unrelated release inputs staged. Do not reopen D01, the adopted design, approved GitHub destination or answered discovery questions.
 
-## Phase 1 intake check — 2026-09-09
+## Historical Phase 1 intake check — before D01 adoption, 2026-09-09
 
 - Located and used the existing `abdelilah-wajid-portfolio` repository inside the selected workspace; no repository creation or clone. Initial `main` was clean at `1037d94`, with zero ahead/behind against the locally stored `origin/main`. No fetch or live remote verification was performed in this check.
 - Read AGENTS, context, state, source authority, open decisions, execution guide, roadmap and QA gates. The latest owner request supersedes older Phase 0-only scope statements; D01 remains an explicit prerequisite.
@@ -46,3 +46,13 @@ Replacement ChatGPT `03-CURRENT-STATE.md` and `04-SOURCE-REGISTER.md` handoff fi
 ## D01 owner decision — 2026-09-09
 
 The owner explicitly confirmed: use the available package and decisions currently documented in this repository as the Phase 1 baseline. D01 is closed by this decision. The missing archive/state/register revisions were not recovered or compared; neither byte nor content equivalence is asserted. Phase 1 may proceed, with original design/copy/logo preserved. Later phases, site publishing, DNS changes and spending remain unauthorized.
+
+## Phase 1 completion — 2026-09-09
+
+- Existing clean `main` resumed at `b2f10f9`; no clone, old-repo import or source/brand rewriting.
+- Application saved in local commit `15c3d93`, with a separate verification/handoff documentation commit. No push or live remote-parity check was performed in this session.
+- Actual versions: Node 24.20.0, pnpm 12.3.4, Next 16.3.4, React 19.2.8, TypeScript 6.0.3, ESLint 9.39.5. Latest TS 7 / ESLint 10 failed actual peer compatibility; compatible pins passed strict installation and checks. ESLint 9's registry deprecation warning remains an upgrade follow-up.
+- `node scripts/pnpm-local.mjs check` passed after a clean frozen-lockfile dependency install: generated types, typecheck, lint, source/runtime validation, five unit tests, production build and HTTP smoke. All five original fonts and four identity assets fetched with matching bytes. Six unknown/pending paths returned 404, including the Windows case-insensitive `/EN/` regression fixed by the request guard.
+- Full installed dependency audit returned zero known advisories at this check. CI is configured but not run remotely. `SITE_ORIGIN` remains unset; no invented production canonical or x-default, no indexable sitemap routes. Root remains 404 pending D02.
+- The complete homepage, final menu, case-study MDX/page and later-phase visuals were not implemented. Local browser tools reported no available browser; actual visual/click QA remains unperformed. HTTP checks are not represented as browser screenshots.
+- The previous generated dependencies/build were preserved under `.local/phase1-initial-*` for the clean-install check. System Node/pnpm and personal/reference files were preserved. ChatGPT source replacement and synchronization did not occur.

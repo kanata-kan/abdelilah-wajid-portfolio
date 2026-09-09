@@ -1,6 +1,12 @@
 # ADR-001 — Foundation
 
-Date: 2026-09-08. Status: **stack accepted by the current owner request; package versions selected for foundation, not installed or compatibility-tested**.
+Date: 2026-09-08. Updated: 2026-09-09. Status: **stack implemented; actual compatible versions pinned during Phase 1**.
+
+## Phase 1 compatibility decision — 2026-09-09
+
+Registry rechecks confirmed Next 16.3.4, React/react-dom 19.2.8 and pnpm 12.3.4. A project-local Node 24.20.0 runtime was installed without changing system tools. The first strict install rejected TypeScript 7.0.2 and ESLint 10.10.0: Next's typescript-eslint 8.70.0 requires TypeScript >=4.8.4 <6.1.0, and its import/react/accessibility plugins require ESLint 9 or earlier. Pin TypeScript 6.0.3 and ESLint 9.39.5, the latest compatible registry versions observed, plus Node 24 types 24.13.3. No peer ranges or strict checks were bypassed. ESLint 9 emits a registry deprecation warning; track the Next plugin ecosystem upgrade before release. The installed-set audit found no known advisories at this check.
+
+Use pnpm 12 `allowBuilds` with exact package versions for native dependency setup; replace the obsolete `onlyBuiltDependencies` setting. [pnpm build settings](https://pnpm.io/settings/build). Actual tool versions and checks are recorded in [Phase 1 verification](../PHASE-1-VERIFICATION.md). The table below preserves the earlier target snapshot, not the final installed selection.
 
 ## Context and decision
 
@@ -42,7 +48,7 @@ src/styles/                        tokens, base styles, CSS Modules
 public/                            approved production assets only
 ```
 
-These paths are a documented plan, not existing files. Keep the dictionary and core prose on the server. Validate unknown locale/slug requests with a real 404. Avoid importing an entire MDX tree based on user input; use an explicit local registry. MDX is executable content and must be trusted/reviewed repository material.
+These paths describe the intended architecture; Phase 1 implements the locale shell and metadata only. Dictionaries import immutable JSON directly from `docs/design/` instead of maintaining a second editable copy. Case-study routes and MDX are deferred to Phase 3. Keep core prose on the server. Validate unknown locale/slug requests with a real 404. Avoid importing an MDX tree based on user input; use an explicit local registry. MDX is executable content and must be trusted/reviewed repository material.
 
 ## Consequences and verification
 

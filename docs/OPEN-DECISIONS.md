@@ -13,7 +13,7 @@ Updated: 2026-09-09. A null field is unresolved. This register never grants perm
 | D07 | Host/provider/plan, canonical HTTPS host, deployment model and rollback target undecided. Existing domain continuity is intended. | Evaluate constraints and current terms, select with owner; implementer/Abdelilah. No purchase or connection without explicit authorization. | Release QA/launch; not independent foundation. |
 | D08 | Search/training crawler policy, webmaster/analytics setup and old-URL inventory not completed. | Decide crawler/measurement scope; Abdelilah. Read-only inventory and actual routing tests; implementer. | Final robots/indexing/migration release gates. |
 | D09 | Guest Review content exists; separate page visual layout not approved. Detailed PR evidence/rights/currentness need revalidation before use. | Bilingual content/template review, exact media scope and current primary evidence check. | Case-study release; not homepage foundation. |
-| D10 | Toolchain targets selected; no packages installed, lockfile or compatibility run yet. | Recheck stable releases, pin compatible actual versions and run Gate 1; implementer. | Claiming runnable/verified application. |
+| D10 — resolved | Real lockfile and compatible Node 24.20.0 / pnpm 12.3.4 / Next 16.3.4 / React 19.2.8 / TS 6.0.3 / ESLint 9.39.5 installed. Latest TS/ESLint majors failed strict peer checks. | Clean frozen install and full automated Gate 1 passed on 2026-09-09; see PHASE-1-VERIFICATION. Track deprecated ESLint 9 until Next lint plugins support a newer major. | No longer blocks local foundation. Browser visual QA was unavailable; release gates and later phases remain. |
 
 ## D01 recheck — 2026-09-09
 

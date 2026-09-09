@@ -1,15 +1,20 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-09-08",
-  "status": "selected-targets-not-installed-or-integration-tested",
+  "checkedOn": "2026-09-09",
+  "status": "installed-clean-frozen-install-and-automated-gate-1-passed",
   "selected": {
     "node": "24.20.0",
     "nodeLts": "Krypton",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "typescript": "7.0.2",
-    "pnpm": "12.3.4"
+    "typescript": "6.0.3",
+    "pnpm": "12.3.4",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.4",
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7"
   },
   "observedLocal": {
     "node": "22.15.0",
@@ -26,5 +31,22 @@
     "typescript": "https://registry.npmjs.org/typescript/latest",
     "pnpm": "https://registry.npmjs.org/pnpm/latest"
   },
-  "nextAction": "Recheck stable/security status at Phase 1 start, pin compatible exact versions and generate/test the real lockfile. Do not claim these packages are installed."
+  "compatibility": {
+    "rejectedLatest": { "typescript": "7.0.2", "eslint": "10.10.0" },
+    "reason": "Strict peer install: typescript-eslint 8.70.0 requires TypeScript >=4.8.4 <6.1.0; Next import/react/a11y plugins require ESLint 9 or earlier.",
+    "strictPeerDependencies": true,
+    "eslintDeprecationFollowup": "Upgrade when Next lint plugin peer ranges support a newer ESLint major. Current installed-set audit returned zero advisories."
+  },
+  "verification": {
+    "cleanFrozenInstall": "passed; existing generated dependencies/build preserved under ignored .local; no clone",
+    "automatedGate1": "passed",
+    "unitTests": 5,
+    "servedCanonicalAssets": 4,
+    "servedOriginalFonts": 5,
+    "auditKnownAdvisories": 0,
+    "browserVisualQA": "unavailable: no browser surface",
+    "hostedCI": "not run",
+    "deployment": "not performed"
+  },
+  "nextAction": "Phase 1 foundation is complete. Review in an available browser and obtain next-phase instruction before homepage implementation. Resolve release inputs in their staged phases."
 }

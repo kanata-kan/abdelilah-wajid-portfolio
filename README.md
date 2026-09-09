@@ -2,7 +2,7 @@
 
 A new portfolio for Abdelilah Wajid, Product Engineer in Marrakech, Morocco. The site will explain his product decisions, engineering work and verification through real work, led by YouIn Guest Review.
 
-**Status: Phase 0 documentation and repository foundation. There is no website application, deployment or application test result yet.** This repository starts with a new Git history; no application code or history was imported from the previous portfolio.
+**Status: Phase 1 application foundation.** `/en/` and `/ar/` provide a private, pre-rendered bilingual shell with original identity/fonts. The complete homepage and case study belong to later phases. There is no deployment. See the dated [verification record](docs/PHASE-1-VERIFICATION.md) for checks and limits. This repository has independent Git history; no application code or history was imported from the previous portfolio.
 
 Public repository: [kanata-kan/abdelilah-wajid-portfolio](https://github.com/kanata-kan/abdelilah-wajid-portfolio), created with the owner's explicit authorization on September 9, 2026. The default branch is `main`.
 
@@ -14,13 +14,13 @@ English is the primary site language. Arabic is a complete second locale with ge
 2. Use [source authority](docs/SOURCE-OF-TRUTH.md) to resolve references and conflicts.
 3. Check [open decisions](docs/OPEN-DECISIONS.md) and the [implementation roadmap](docs/IMPLEMENTATION-ROADMAP.md) before extending scope.
 
-For Abdelilah: هاد الريبو كيجمع المرجع التقني وقواعد التصميم والإثبات. الكود ديال الموقع ما بداش؛ النواقص والحدود موثقة بوضوح قبل المرحلة التالية.
+For Abdelilah: الأساس التقني ديال اللغتين موجود. افتح `/ar/` أو `/en/` محلياً؛ الصفحة الرئيسية الكاملة باقية للمرحلة الثانية، والنشر ما تدارش.
 
 ## Architecture direction
 
 Next.js stable at implementation start, React, strict TypeScript, pnpm, App Router, Server Components by default, static-first public pages, CSS Modules and frozen tokens, local fonts, typed local content and repository-owned MDX for the case study. No CMS, database, monorepo or general animation framework in v1.
 
-The dated version selection is in [ADR-001](docs/architecture/ADR-001-foundation.md). These are recorded targets, not installed dependencies. Exact compatible versions and the real lockfile belong to the first application foundation commit.
+Actual compatible versions are pinned in `package.json`, `.node-version` and `pnpm-lock.yaml`: Node 24.20.0, pnpm 12.3.4, Next 16.3.4, React 19.2.8, TypeScript 6.0.3 and ESLint 9.39.5. [ADR-001](docs/architecture/ADR-001-foundation.md) records the compatibility decision.
 
 ## Repository map
 
@@ -47,16 +47,30 @@ scripts/verify-docs.mjs            dependency-free reference integrity check
 
 Full design boards, original guides, project snapshots and Guest Review evidence are in the separate local `portfolio-reference-materials` handoff, outside this Git repository. A clone does not include those private references. The source guide explains how to restore them before visual implementation.
 
-## Run the current check
+## Run locally
 
-With Node.js available, from the repository root:
+With Node 24.20.0 and pnpm 12.3.4, from the repository root:
 
 ```sh
-node scripts/verify-docs.mjs
-git diff --check
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-The check validates document links, required files, imported-file hashes and EN/AR content shape. It does not test a website. There is deliberately no `pnpm dev`, `build`, `lint`, `typecheck` or CI workflow yet; [Phase 1](docs/IMPLEMENTATION-ROADMAP.md) adds real commands and runs them from a clean clone.
+Open `http://127.0.0.1:3000/en/` or `http://127.0.0.1:3000/ar/`. `/` intentionally has no route while D02 is unresolved. The preview locale controls are foundation utilities, not the finished homepage header/menu.
+
+On this Windows workspace, pinned tools are also installed under ignored `.local/toolchain`. Run `node scripts/pnpm-local.mjs dev` or replace `dev` with any pnpm command. This avoids changing global tools or PowerShell policy. To restore the optional local tools:
+
+```powershell
+npm.cmd install --prefix .local/toolchain --no-save --package-lock=false node@24.20.0 pnpm@12.3.4
+node scripts/pnpm-local.mjs install --frozen-lockfile
+node scripts/pnpm-local.mjs check
+```
+
+`pnpm check` runs generated types, strict typecheck, lint, source/runtime-asset checks, five focused Node tests, production build and an HTTP smoke test that starts/stops its own server. `pnpm audit --json` checks installed packages against registry advisories. CI runs the same gate with read-only permissions; a workflow file alone is not a hosted CI result.
+
+No environment variables are required locally. Optional `SITE_ORIGIN` must be a verified HTTPS origin; unset means canonical/alternate/OG URLs are omitted. Phase 1 is always noindex, has an empty sitemap and blocks crawlers in robots.txt. An origin alone cannot enable publication/indexing. These measures are not access control; the server binds to loopback by default.
+
+Dictionaries and layout tokens import the frozen contracts directly. `src/` contains the app shell, locale registry, metadata and local-font loading; `public/` contains only four approved identity/icon assets. Case-study MDX and interaction suites are staged with the later pages/flows they test.
 
 ## Quality and constraints
 

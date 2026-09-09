@@ -2,6 +2,12 @@
 
 Updated: 2026-09-09. Every imported repository file is fingerprinted in [imports.json](provenance/imports.json). Original source identities are in [source-index.json](provenance/source-index.json). Original design paths below are package-relative, not assumed public URLs.
 
+## Phase 1 runtime mapping — 2026-09-09
+
+`public/brand/aw-primary-color.svg` copies the canonical lockup byte-for-byte. `public/favicon.svg`, `public/favicon.ico` and `public/apple-touch-icon.png` copy the corresponding originals. `scripts/verify-runtime-assets.mjs` verifies these four copies; the production HTTP smoke test also fetches and compares the served bytes. Intrinsic logo dimensions are the original 1425 × 326, with CSS controlling proportional display size.
+
+`src/styles/fonts.ts` loads the five supplied WOFF2 files directly through next/font/local; the original font-face reference is not loaded a second time. All five generated font URLs were fetched and matched to source bytes. `src/lib/i18n/dictionaries.ts` and `src/styles/globals.css` import canonical copy/layout directly. The existing input inventory below preserves original source paths; its earlier future-use descriptions are superseded by this mapping. No private product media or design boards were copied to public assets.
+
 ## Available, preserved inputs
 
 | Asset | Original package path | Repository / usage | Status |
