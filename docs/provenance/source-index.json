@@ -102,13 +102,11 @@
     {
       "scope": "relevant turns; not claimed exhaustive",
       "kind": "retrieved-conversation",
-      "idInApp": "6a9deaae-35d8-83e9-a7c8-fe52c659b946",
       "id": "S10",
       "title": "أول خطوة للمشروع"
     },
     {
       "kind": "retrieved-conversation",
-      "idInApp": "6a9f5621-4e28-83ea-b67d-a9add3100b4c",
       "id": "S11",
       "title": "مراجعة تصميم البورتفوليو"
     },

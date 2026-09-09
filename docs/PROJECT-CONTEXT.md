@@ -43,6 +43,7 @@ Electro Abidin and ElMoussaif have concise approved descriptions. Their public p
 | 2026-09-08 | Homepage design v1.0 documented as adopted | Replaces earlier wireframe concepts for homepage execution. |
 | 2026-09-08 | Owner rejects reuse of the old portfolio repo | New repository and new history override the earlier branch proposal. |
 | 2026-09-08 | Owner fixes the stack and requests Phase 0 documentation | Authorizes the present repository, docs and genuine commits. Does not authorize deployment. |
+| 2026-09-09 | Owner selects `kanata-kan/abdelilah-wajid-portfolio` — Public | Authorizes public repository creation and upload of reviewed repo files; full archives/private notes remain outside Git. Site deployment remains separate. |
 
 The strategy review contains five sensible corrections, applied here as implementation process constraints: hosting provider selection is a release gate; schema must match visible content; tests are staged by risk; Lighthouse is only one diagnostic; 8–12 days is an estimate to revisit after foundation. There is no original `Execution Baseline v1.1` file in the recovered sources; these documents do not pretend one was supplied.
 
