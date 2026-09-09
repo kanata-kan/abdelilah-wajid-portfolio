@@ -15,4 +15,10 @@ Updated: 2026-09-09. A null field is unresolved. This register never grants perm
 | D09 | Guest Review content exists; separate page visual layout not approved. Detailed PR evidence/rights/currentness need revalidation before use. | Bilingual content/template review, exact media scope and current primary evidence check. | Case-study release; not homepage foundation. |
 | D10 | Toolchain targets selected; no packages installed, lockfile or compatibility run yet. | Recheck stable releases, pin compatible actual versions and run Gate 1; implementer. | Claiming runnable/verified application. |
 
-Resolved by the current task: new repo/history, full EN/AR, stable Next/React/strict TS/pnpm stack, static-first/server-default approach, local MDX, exact design/copy protection, original logo only, staged QA and no unauthorized external side effects. Do not ask to reapprove these.
+## D01 recheck — 2026-09-09
+
+The owner requested Phase 1 in the existing repository, explicitly conditional on resolving D01. The available reference folder passed a fresh hash check: 8 registered source snapshots and 213 extracted design files, zero mismatches. The three exact requested revisions remain absent from the selected workspace. The outer recovered design ZIP is absent too; only its extracted baseline was reverified here. The September 9 handoff replacements are repository summaries, not recovered copies of the missing originals.
+
+This establishes integrity of the available September 8 design package and September 6/7 context snapshots. It cannot establish content differences or equivalence to the missing revisions. D01 remains open pending the owner's explicit adoption of this available package and repository decisions as the Phase 1 baseline, or provision of the exact originals. No approval is inferred from the Phase 1 request.
+
+Resolved by the current task: use the existing repo/history without creating or cloning another repo; Phase 1 only after D01, full EN/AR, stable Next/React/strict TS/pnpm stack, static-first/server-default approach, local MDX, exact design/copy protection, original logo only, staged QA and no unauthorized external side effects. Do not ask to reapprove these.
