@@ -1,0 +1,178 @@
+{
+  "version": "1.0.0",
+  "direction": {
+    "en": "ltr",
+    "ar": "rtl"
+  },
+  "rootOrder": [
+    "skip-link",
+    "header",
+    "mobile-menu",
+    "main",
+    "footer"
+  ],
+  "mainOrder": [
+    "hero",
+    "mobile-bridge",
+    "work",
+    "other-work",
+    "rescue",
+    "approach",
+    "about"
+  ],
+  "header": {
+    "tag": "header",
+    "class": "site-header container",
+    "order": [
+      "brand",
+      "desktop-nav",
+      "desktop-locale",
+      "mobile-toggle"
+    ],
+    "brandClass": "brand",
+    "logoPath": "02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/01-SVG/aw-primary-color.svg",
+    "mobileMenuId": "mobile-menu",
+    "desktopNavFromWidth": 960
+  },
+  "mobileMenu": {
+    "tag": "nav",
+    "class": "mobile-menu container",
+    "hiddenByDefault": true,
+    "order": [
+      "work",
+      "approach",
+      "about",
+      "contact",
+      "locale"
+    ],
+    "showBelowWidth": 960,
+    "toggleAttributes": [
+      "aria-expanded",
+      "aria-controls=\"mobile-menu\""
+    ]
+  },
+  "hero": {
+    "class": "hero container",
+    "order": [
+      "hero-copy",
+      "hero-figure"
+    ],
+    "copyOrder": [
+      "hero.eyebrow",
+      "hero.title",
+      "hero.body",
+      "hero-actions"
+    ],
+    "headingLevel": 1,
+    "actionOrder": [
+      "hero.primaryAction",
+      "hero.secondaryAction"
+    ],
+    "figureOrder": [
+      "portrait",
+      "portrait-caption"
+    ]
+  },
+  "mobileBridge": {
+    "class": "mobile-bridge container",
+    "text": "hero.mobileBridge",
+    "showBelowWidth": 600
+  },
+  "work": {
+    "id": "work",
+    "class": "featured section container",
+    "domOrder": [
+      "featured-intro",
+      "featured-figure",
+      "featured-reasoning"
+    ],
+    "introOrder": [
+      "work.desktopEyebrow|work.mobileEyebrow",
+      "work.desktopTitle|work.mobileTitle",
+      "work.description",
+      "work.role"
+    ],
+    "headingLevel": 2,
+    "roleHiddenBelowWidth": 600,
+    "titleVariantBoundary": 600,
+    "reasonOrder": [
+      "problem",
+      "decision",
+      "result",
+      "status-below-960",
+      "case-action"
+    ],
+    "figureStatusVisibleFromWidth": 960,
+    "statusAccessibility": "Exactly one visible/announced instance at each width"
+  },
+  "otherWork": {
+    "class": "section container",
+    "heading": "otherWork.title",
+    "headingLevel": 2,
+    "rows": [
+      "electro",
+      "elmoussaif"
+    ],
+    "rowClass": "project-row",
+    "rowDomOrder": [
+      "text",
+      "thumbnail"
+    ],
+    "rowHeadingLevel": 3,
+    "desktopImageRatio": "4/1",
+    "mobileImageRatio": "2/1",
+    "mobileBoundary": 600
+  },
+  "rescue": {
+    "class": "rescue container",
+    "domOrder": [
+      "rescue-copy",
+      "rescue-action"
+    ],
+    "copyOrder": [
+      "rescue.eyebrow",
+      "rescue.title",
+      "rescue.body"
+    ],
+    "headingLevel": 2
+  },
+  "approach": {
+    "id": "approach",
+    "class": "section container",
+    "heading": "approach.title",
+    "headingLevel": 2,
+    "stepsClass": "approach-steps",
+    "stepClass": "approach-step",
+    "steps": [
+      "01",
+      "02",
+      "03"
+    ],
+    "stepHeadingLevel": 3
+  },
+  "about": {
+    "id": "about",
+    "class": "about section container",
+    "domOrder": [
+      "about-copy",
+      "capabilities"
+    ],
+    "headingLevel": 2,
+    "capabilitiesHeadingLevel": 2,
+    "capabilitiesElement": "ul"
+  },
+  "footer": {
+    "id": "contact",
+    "tag": "footer",
+    "class": "contact",
+    "innerClass": "container",
+    "mainClass": "contact-main",
+    "domOrder": [
+      "contact-copy",
+      "contact-action",
+      "copyright"
+    ],
+    "headingLevel": 2
+  },
+  "implementationNote": "These are required semantic roles/class hooks, not framework components. Desktop positioning must not corrupt mobile DOM order. Use only one H1. Heading levels follow semantics; apply visual styles independently where needed."
+}

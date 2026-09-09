@@ -1,0 +1,32 @@
+{
+  "note": "Null is intentionally unresolved. Do not deploy a CTA with href=\"#\", a fabricated destination or a nonfunctional button.",
+  "home": {
+    "en": "/en/",
+    "ar": "/ar/"
+  },
+  "navigation": {
+    "work": "#work",
+    "approach": "#approach",
+    "about": "#about",
+    "contact": "#contact"
+  },
+  "actions": {
+    "heroPrimary": "#work",
+    "heroSecondary": "#contact",
+    "rescue": "#contact",
+    "youinCaseStudy": {
+      "en": null,
+      "ar": null
+    },
+    "contact": null
+  },
+  "secondaryProjectLinks": {
+    "electro": null,
+    "elmoussaif": null
+  },
+  "behavior": {
+    "secondaryRows": "Informational rows; do not make clickable without a verified destination",
+    "locale": "Equivalent home locale; preserve an existing section hash",
+    "root": "No forced geolocation or automatic language decision specified; home locale preference remains a deployment setting"
+  }
+}

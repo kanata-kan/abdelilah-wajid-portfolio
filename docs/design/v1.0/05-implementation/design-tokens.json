@@ -1,0 +1,266 @@
+{
+  "version": "1.0.0",
+  "status": "frozen-implementation-baseline",
+  "date": "2026-09-08",
+  "provenance": {
+    "brandColors": "Original brand kit v1.0",
+    "geometryAndType": "Resolved numerically in this handoff; not recovered from a Figma file or identified from generated pixels"
+  },
+  "color": {
+    "forest": "#19302E",
+    "sage": "#6C8B70",
+    "ivory": "#FEFEFB",
+    "ink": "#0D1826",
+    "body": "#46536A",
+    "muted": "#5D6877",
+    "surface": "#EEF2ED",
+    "line": "#D6DDD8",
+    "white": "#FFFFFF",
+    "hover": "#254640",
+    "focus": "#35675E",
+    "youinFrame": "#100D0B"
+  },
+  "font": {
+    "en": "Inter",
+    "ar": "IBM Plex Sans Arabic",
+    "weights": [
+      400,
+      500,
+      600,
+      700
+    ],
+    "logo": "Use outlined SVG artwork; not a font"
+  },
+  "space": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    40,
+    48,
+    56,
+    64,
+    80
+  ],
+  "breakpoints": {
+    "mobileMax": 599,
+    "tabletMin": 600,
+    "desktopMin": 960
+  },
+  "layout": {
+    "containerMax": 1280,
+    "gutter": {
+      "mobile": 20,
+      "tablet": 32,
+      "desktop": 40
+    },
+    "sectionPaddingBlock": {
+      "mobile": 28,
+      "tablet": 32,
+      "desktop": 20
+    },
+    "heroColumns": [
+      1.65,
+      1
+    ],
+    "featuredColumns": [
+      1,
+      2.1
+    ],
+    "aboutColumns": [
+      1,
+      1
+    ],
+    "columnGap": {
+      "mobile": 20,
+      "tablet": 24,
+      "desktop": 32
+    },
+    "headerMinHeight": {
+      "mobile": 80,
+      "tablet": 80,
+      "desktop": 72
+    },
+    "logoWidth": {
+      "mobile": 200,
+      "tablet": 200,
+      "desktop": 224
+    },
+    "portraitRatio": {
+      "mobile": "4/3",
+      "tablet": "4/3",
+      "desktop": "3/2"
+    },
+    "youinRatio": {
+      "mobile": "4/3",
+      "tablet": "16/10",
+      "desktop": "16/10"
+    },
+    "thumbnailWidth": {
+      "mobile": 136,
+      "tablet": 184,
+      "desktop": 312
+    },
+    "thumbnailRatio": {
+      "mobile": "2/1",
+      "tablet": "4/1",
+      "desktop": "4/1"
+    },
+    "secondaryRowMinHeight": {
+      "mobile": 96,
+      "tablet": 96,
+      "desktop": 92
+    },
+    "narrowLogoMax": "viewport - 136px"
+  },
+  "type": {
+    "h1": {
+      "en": {
+        "desktop": [
+          36,
+          42,
+          700
+        ],
+        "tablet": [
+          34,
+          42,
+          700
+        ],
+        "mobile": [
+          32,
+          40,
+          700
+        ]
+      },
+      "ar": {
+        "desktop": [
+          36,
+          48,
+          700
+        ],
+        "tablet": [
+          34,
+          48,
+          700
+        ],
+        "mobile": [
+          32,
+          46,
+          700
+        ]
+      }
+    },
+    "h2": {
+      "en": [
+        24,
+        30,
+        700
+      ],
+      "ar": [
+        24,
+        36,
+        600
+      ]
+    },
+    "h3": {
+      "en": [
+        18,
+        24,
+        600
+      ],
+      "ar": [
+        20,
+        30,
+        600
+      ]
+    },
+    "body": {
+      "en": [
+        16,
+        24,
+        400
+      ],
+      "ar": [
+        16,
+        28,
+        400
+      ]
+    },
+    "small": {
+      "en": [
+        14,
+        20,
+        400
+      ],
+      "ar": [
+        14,
+        24,
+        400
+      ]
+    },
+    "caption": {
+      "en": [
+        12,
+        18,
+        400
+      ],
+      "ar": [
+        12,
+        20,
+        400
+      ]
+    },
+    "compactSectionTitle": {
+      "en": [
+        20,
+        28,
+        700
+      ],
+      "ar": [
+        20,
+        30,
+        600
+      ]
+    },
+    "projectTitle": {
+      "font": "Inter",
+      "values": [
+        16,
+        24,
+        600
+      ]
+    }
+  },
+  "component": {
+    "buttonMinHeight": 48,
+    "buttonInlinePadding": 24,
+    "buttonGap": 12,
+    "buttonRadius": 3,
+    "mediaRadius": 3,
+    "buttonWeight": 600,
+    "buttonFontSize": 16,
+    "ruleWidth": 1,
+    "focusWidth": 2,
+    "focusOffset": 3,
+    "iconSize": 20,
+    "menuTargetMin": 44,
+    "rescuePadding": 24,
+    "approachGap": 24
+  },
+  "motion": {
+    "hoverDurationMs": 120,
+    "hoverEasing": "ease-out",
+    "scrollBehavior": "auto",
+    "reducedMotion": "disable transitions"
+  },
+  "imageFit": {
+    "portrait": "cover; 50% 35%",
+    "youinDesktop": "contain; 50% 50%",
+    "youinMobile": "cover; 0% 0% (left/top anchored crop; verify visible review list)",
+    "secondary": "cover; 50% 0%"
+  }
+}

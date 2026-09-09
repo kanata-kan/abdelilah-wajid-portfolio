@@ -7,3 +7,5 @@
 # Preserve the source handoff byte for byte, including its own line endings.
 docs/design/v1.0/05-implementation/** -text
 assets/brand/canonical-paths.json -text
+# Preserve upstream license CRLF/trailing spaces; exact hashes remain checked.
+docs/design/v1.0/05-implementation/fonts/*-OFL.txt whitespace=-blank-at-eol,cr-at-eol

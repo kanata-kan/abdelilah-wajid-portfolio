@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "importedOn": "2026-09-08",
+  "recordedOn": "2026-09-09",
+  "sourcePackageVersion": "1.0.0",
+  "sourceFileManifestSha256": "ee6640f9487ce4a5e8a68230e0f2d7d93dd26997a81abeacfbf31f89c9adfc59",
+  "files": [
+    {
+      "path": "docs/design/v1.0/05-implementation/asset-slots.json",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/asset-slots.json",
+      "sha256": "1bd4e492a6b4d5f4b076557c46f5ec6a2ab5ef2384b9fd0c70bf62ba8bb23c6d",
+      "bytes": 1213,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "assets/brand/favicon.ico",
+      "sourceId": "S08",
+      "sourcePath": "02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/05-Web-App/favicon.ico",
+      "sha256": "66cf384fa2f607a7fac878bcd6f770b36b87bd4546c275589474941db3b0be92",
+      "bytes": 23442,
+      "role": "original-brand-artwork"
+    },
+    {
+      "path": "assets/brand/canonical-paths.json",
+      "sourceId": "S08",
+      "sourcePath": "02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/08-Source/canonical-paths.json",
+      "sha256": "0166395d1bf59aa1ed8321aa1ae21bb2076f3576b67327b9cdf462e7f0c8865a",
+      "bytes": 44928,
+      "role": "original-brand-artwork"
+    },
+    {
+      "path": "assets/brand/aw-master-outlined.svg",
+      "sourceId": "S08",
+      "sourcePath": "02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/08-Source/aw-master-outlined.svg",
+      "sha256": "e71bacb5d91395338ac862cc82eb225ce7d6f50a3522cc81b8af0aa5c650bd4f",
+      "bytes": 44477,
+      "role": "original-brand-artwork"
+    },
+    {
+      "path": "assets/brand/aw-primary-color.svg",
+      "sourceId": "S08",
+      "sourcePath": "02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/01-SVG/aw-primary-color.svg",
+      "sha256": "e71bacb5d91395338ac862cc82eb225ce7d6f50a3522cc81b8af0aa5c650bd4f",
+      "bytes": 44477,
+      "role": "original-brand-artwork"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/README.md",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/README.md",
+      "sha256": "da937e45763a30b3b3855a23dd6f40fdc5ef364a229d520d4778b06868d8f329",
+      "bytes": 926,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/Inter-Variable.woff2",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/Inter-Variable.woff2",
+      "sha256": "d36b011b72c2da1f518861bf3ac1a0636a63cb21925de5836b283ff2c022cc84",
+      "bytes": 350556,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/Inter-Variable.ttf",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/Inter-Variable.ttf",
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "bytes": 876576,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/Inter-OFL.txt",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/Inter-OFL.txt",
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "bytes": 4377,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/IBMPlexSansArabic-SemiBold.woff2",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/IBMPlexSansArabic-SemiBold.woff2",
+      "sha256": "6102fc8af201283831ab9e753c53cd4a207506b7233f2840fc666bb91360fb7f",
+      "bytes": 75932,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/IBMPlexSansArabic-SemiBold.ttf",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/IBMPlexSansArabic-SemiBold.ttf",
+      "sha256": "597bd5502e5997be4414e4c9c88834b30ff3784250c84f20bce2b20e53ebd467",
+      "bytes": 244616,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/IBMPlexSansArabic-Regular.woff2",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/IBMPlexSansArabic-Regular.woff2",
+      "sha256": "e8bcb3e3ece46be9ff628b922e18300c944741f6644d1475da94240a8625a24a",
+      "bytes": 71544,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "assets/brand/favicon.svg",
+      "sourceId": "S08",
+      "sourcePath": "02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/05-Web-App/favicon.svg",
+      "sha256": "bde1a3270c2322e95affa8c780d349e16f79df3e6723965b2656452902653d97",
+      "bytes": 7056,
+      "role": "original-brand-artwork"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/IBMPlexSansArabic-Regular.ttf",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/IBMPlexSansArabic-Regular.ttf",
+      "sha256": "6f611412270a132bbac838da9259d4c68569b4175f3b3b8fa3fa36a30b56dab9",
+      "bytes": 235924,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/IBMPlexSansArabic-Medium.woff2",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/IBMPlexSansArabic-Medium.woff2",
+      "sha256": "fae3fe6ec600003ddda49b7779b869871528e51edcdc1fab78dd5d13da81f047",
+      "bytes": 75484,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/IBMPlexSansArabic-Medium.ttf",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/IBMPlexSansArabic-Medium.ttf",
+      "sha256": "b8363ab9f733dfa4f8e96b8b2102c24b5cf4110fb96d1d3d9a9412f6fb49cf74",
+      "bytes": 242100,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/IBMPlexSansArabic-Bold.woff2",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/IBMPlexSansArabic-Bold.woff2",
+      "sha256": "56ee25d1cf7fd6e773a7d46a3bf2010719c94afa6490fedb5ac78928194cc7ba",
+      "bytes": 73588,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/IBMPlexSansArabic-Bold.ttf",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/IBMPlexSansArabic-Bold.ttf",
+      "sha256": "691e0c891a38637ae6bbdb69700f8042cb0724a137bee615068ffdb92244f61f",
+      "bytes": 246992,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/content/en.json",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/content/en.json",
+      "sha256": "6e5216cc94daee4e61ae374b96b51809b6ce19178c44fe817a0f3d2bf3ddb23a",
+      "bytes": 4018,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/content/ar.json",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/content/ar.json",
+      "sha256": "d43b932dccbb966adb6e9302b3b1861d9557d2bd165ebd680054ae03959d8c1b",
+      "bytes": 4878,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/links.json",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/links.json",
+      "sha256": "68336b538b7c767ecf0cd6115c78ae71689f7cd084b7518352c39654d33b728b",
+      "bytes": 907,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/layout-contract.css",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/layout-contract.css",
+      "sha256": "edc53cff8c9a05f498b093cd3472e757b2b881998b0799afd1389e0f86f7a4ff",
+      "bytes": 10110,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/homepage.structure.json",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/homepage.structure.json",
+      "sha256": "2f3cf44010987594b8fbf7925d92be89f3c387af332a4e19af20db1688540c1a",
+      "bytes": 3835,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts.css",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts.css",
+      "sha256": "1a9080a5ed8147788b6cf4c4b50d474670af3e127a765a92816375e6a35ae27b",
+      "bytes": 952,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/design-tokens.json",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/design-tokens.json",
+      "sha256": "5986efadfe3f48cc07479367048283b863c4dcf1eed05612cd8242bc582b22bb",
+      "bytes": 4361,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "docs/design/v1.0/05-implementation/fonts/IBMPlexSansArabic-OFL.txt",
+      "sourceId": "S08",
+      "sourcePath": "05-implementation/fonts/IBMPlexSansArabic-OFL.txt",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "bytes": 4456,
+      "role": "frozen-design-input"
+    },
+    {
+      "path": "assets/brand/apple-touch-icon.png",
+      "sourceId": "S08",
+      "sourcePath": "02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/05-Web-App/apple-touch-icon.png",
+      "sha256": "c20540d010522d4bfcf5bbabe425834ef0373b1298be61e60c939631cc53a6ac",
+      "bytes": 4121,
+      "role": "original-brand-artwork"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-09-08",
+  "status": "selected-targets-not-installed-or-integration-tested",
+  "selected": {
+    "node": "24.20.0",
+    "nodeLts": "Krypton",
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "typescript": "7.0.2",
+    "pnpm": "12.3.4"
+  },
+  "observedLocal": {
+    "node": "22.15.0",
+    "pnpm": "10.28.2",
+    "git": "2.49.0.windows.1"
+  },
+  "nextNodeEngine": ">=20.9.0",
+  "nextIntegrity": "sha512-/Ztf6CeRH+ejEXUrYtqI4gkS66eFIHuSwqi60RgcpWKodxFZx2/dqVCMKBwILfAHXQ+F1b1vAudgj3mnxqtoIA==",
+  "sources": {
+    "node": "https://nodejs.org/dist/index.json",
+    "next": "https://registry.npmjs.org/next/latest",
+    "react": "https://registry.npmjs.org/react/latest",
+    "react-dom": "https://registry.npmjs.org/react-dom/latest",
+    "typescript": "https://registry.npmjs.org/typescript/latest",
+    "pnpm": "https://registry.npmjs.org/pnpm/latest"
+  },
+  "nextAction": "Recheck stable/security status at Phase 1 start, pin compatible exact versions and generate/test the real lockfile. Do not claim these packages are installed."
+}

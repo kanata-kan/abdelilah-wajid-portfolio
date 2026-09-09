@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "recordedOn": "2026-09-09",
+  "referenceFolder": "portfolio-reference-materials",
+  "referenceFolderTrackedInGit": false,
+  "sources": [
+    {
+      "id": "S02",
+      "name": "01-PROJECT-INSTRUCTIONS.md",
+      "sourceDate": "2026-09-06",
+      "referencePath": "project/01-PROJECT-INSTRUCTIONS.md",
+      "sha256": "5cdf324aad44b24f82a10294035f1debea313fecda7f94379e72863e5f59f7de",
+      "bytes": 9676,
+      "state": "read-original-local-snapshot",
+      "owner": "Abdelilah Wajid project",
+      "reviewedOn": "2026-09-08"
+    },
+    {
+      "id": "S03",
+      "name": "02-MASTER-CONTEXT.md",
+      "sourceDate": "2026-09-06",
+      "referencePath": "project/02-MASTER-CONTEXT.md",
+      "sha256": "24849d4148c49049a5361b214414c7e6ae2ca047e453f332bc70431356b738ca",
+      "bytes": 13487,
+      "state": "read-original-local-snapshot",
+      "owner": "Abdelilah Wajid project",
+      "reviewedOn": "2026-09-08"
+    },
+    {
+      "id": "S04",
+      "name": "03-CURRENT-STATE(1).md",
+      "sourceDate": "2026-09-06",
+      "referencePath": "project/03-CURRENT-STATE(1).md",
+      "sha256": "2aa28dccd77aeef42cbd15dc1159e203acd26a215d2861f2a3e49ff69ee0d637",
+      "bytes": 6879,
+      "state": "read-original-local-snapshot",
+      "owner": "Abdelilah Wajid project",
+      "reviewedOn": "2026-09-08"
+    },
+    {
+      "id": "S05",
+      "name": "04-SOURCE-REGISTER.md",
+      "sourceDate": "2026-09-06",
+      "referencePath": "project/04-SOURCE-REGISTER.md",
+      "sha256": "437c9fc97dc581edb28635830dcb717b4afe5253004a0007d56ba34fe294c841",
+      "bytes": 6387,
+      "state": "read-original-local-snapshot",
+      "owner": "Abdelilah Wajid project",
+      "reviewedOn": "2026-09-08"
+    },
+    {
+      "id": "S06",
+      "name": "03-CURRENT-STATE.md (local September 7 revision)",
+      "sourceDate": "2026-09-07",
+      "referencePath": "project/03-CURRENT-STATE-local-2026-09-07.md",
+      "sha256": "ba56b9325becc4b380710d943760fb0a765216ae9b01f0d43ac29a5ddaef945b",
+      "bytes": 4849,
+      "state": "read-original-local-snapshot",
+      "owner": "Abdelilah Wajid project",
+      "reviewedOn": "2026-09-08"
+    },
+    {
+      "id": "S07",
+      "name": "AW-Portfolio-Execution-Strategy-v1.md",
+      "sourceDate": "2026-09-08",
+      "referencePath": "strategy/AW-Portfolio-Execution-Strategy-v1.md",
+      "sha256": "77756e98cd418b3e52d30c94c550989bb58d3a8387818da6bfad562e2f70487e",
+      "bytes": 24682,
+      "state": "read-original-local-snapshot",
+      "owner": "Abdelilah Wajid project",
+      "reviewedOn": "2026-09-08"
+    },
+    {
+      "id": "S08",
+      "name": "AW-Portfolio-Design-v1.0 / FILE-MANIFEST.sha256",
+      "sourceDate": "2026-09-08",
+      "referencePath": "design/AW-Portfolio-Design-v1.0/FILE-MANIFEST.sha256",
+      "sha256": "ee6640f9487ce4a5e8a68230e0f2d7d93dd26997a81abeacfbf31f89c9adfc59",
+      "bytes": 26653,
+      "state": "read-original-local-snapshot",
+      "owner": "Abdelilah Wajid project",
+      "reviewedOn": "2026-09-08"
+    },
+    {
+      "id": "S09",
+      "name": "YouIn-Guest-Review-Case-Study-Source-v1.md",
+      "sourceDate": "2026-09-07",
+      "referencePath": "design/AW-Portfolio-Design-v1.0/06-sources/YouIn-Guest-Review-Case-Study-Source-v1.md",
+      "sha256": "4b6088702ac4a768a10d90a9f3455e0276766c134e2e673308cb20f30f47afd5",
+      "bytes": 21533,
+      "state": "read-original-local-snapshot",
+      "owner": "Abdelilah Wajid project",
+      "reviewedOn": "2026-09-08"
+    }
+  ],
+  "contextReferences": [
+    {
+      "kind": "current-owner-request",
+      "date": "2026-09-08",
+      "id": "S01"
+    },
+    {
+      "scope": "relevant turns; not claimed exhaustive",
+      "kind": "retrieved-conversation",
+      "idInApp": "6a9deaae-35d8-83e9-a7c8-fe52c659b946",
+      "id": "S10",
+      "title": "أول خطوة للمشروع"
+    },
+    {
+      "kind": "retrieved-conversation",
+      "idInApp": "6a9f5621-4e28-83ea-b67d-a9add3100b4c",
+      "id": "S11",
+      "title": "مراجعة تصميم البورتفوليو"
+    },
+    {
+      "kind": "official-docs-and-registries",
+      "details": "Links and dates in ADRs, SEO-GEO and toolchain.json",
+      "id": "S12"
+    }
+  ],
+  "missingExactRevisions": [
+    "AW-Portfolio-Design-v1.0(1).zip",
+    "03-CURRENT-STATE(6).md",
+    "04-SOURCE-REGISTER(2).md"
+  ],
+  "recoveredArchive": {
+    "sha256": "a075527c505f16596387487fbfdc9610ecc88fcf27d65c79828892ccd114112b",
+    "equivalenceToRequestedSuffixVersion": "unverified",
+    "name": "AW-Portfolio-Design-v1.0.zip"
+  }
+}

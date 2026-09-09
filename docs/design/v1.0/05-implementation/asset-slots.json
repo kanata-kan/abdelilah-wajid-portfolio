@@ -1,0 +1,34 @@
+{
+  "logo": {
+    "path": "02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/01-SVG/aw-primary-color.svg",
+    "state": "ready",
+    "mustPreserveVectorPaths": true
+  },
+  "portrait": {
+    "path": null,
+    "reference": "01-approved-views/home-en-desktop.png",
+    "state": "illustrative-in-mockup; original personal photo required for production",
+    "crop": "cover; 50% 35%"
+  },
+  "youin": {
+    "path": "03-evidence/02-review-management.png",
+    "state": "genuine-source-available; approve framing and currentness before production",
+    "neverMirror": true,
+    "desktopFit": "contain; 50% 50%",
+    "mobileFit": "cover; 0% 0% (left/top anchored crop; verify visible review list)"
+  },
+  "electro": {
+    "path": null,
+    "reference": "01-approved-views/home-en-desktop.png",
+    "state": "illustrative-thumbnail-in-mockup; actual project capture required"
+  },
+  "elmoussaif": {
+    "path": null,
+    "reference": "01-approved-views/home-en-desktop.png",
+    "state": "illustrative-thumbnail-in-mockup; actual project capture required"
+  },
+  "youinProductLogo": {
+    "path": null,
+    "state": "Preserve inside genuine screenshot; separate official vector only if later needed. Do not trace or recreate."
+  }
+}
