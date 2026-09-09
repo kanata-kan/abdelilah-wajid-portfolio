@@ -1,4 +1,4 @@
-@import '../../docs/design/v1.0/05-implementation/layout-contract.css';
+@import './layout.generated.css';
 
 :root { --ui-font: var(--font-inter), sans-serif; }
 :root:lang(ar) { --ui-font: var(--font-arabic), sans-serif; }
@@ -6,3 +6,15 @@ body { font-synthesis: none; }
 .latin { font-family: var(--font-inter), sans-serif; }
 .skip-link { position: absolute; inset-inline-start: var(--gutter); inset-block-start: 8px; transform: translateY(-200%); padding: 12px; background: var(--aw-ivory); }
 .skip-link:focus { transform: translateY(0); }
+.skip-link { z-index: 10; }
+.desktop-nav a, .desktop-locale a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.desktop-locale { display: flex; gap: 12px; }
+.desktop-locale [aria-current], .mobile-locale [aria-current] { text-decoration: underline; font-weight: 600; }
+.mobile-locale { display: flex; gap: 24px; border-block-start: 1px solid var(--aw-line); margin-block-start: 8px; }
+.project-row h3 { font-family: var(--font-inter), sans-serif; }
+.project-row { overflow-wrap: anywhere; }
+.site-header, .desktop-nav { flex-wrap: wrap; }
+a[lang="ar"] { font-family: var(--font-arabic), sans-serif; }
+a[lang="en"] { font-family: var(--font-inter), sans-serif; }
+@media (max-width: 959px) { .desktop-locale { display: none; } }
+@media (min-width: 960px) { .mobile-menu { display: none; } }
