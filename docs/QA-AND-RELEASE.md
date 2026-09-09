@@ -8,7 +8,7 @@ Updated: 2026-09-09. An item is verified only when its actual result is recorded
 - Imported brand/design inputs match original hashes; EN/AR keys and value types agree.
 - Provenance distinguishes available originals, reported evidence and missing exact revisions.
 - New Git root/history, no old-repo history, secrets, raw archive or unrelated user files staged.
-- All null assets/destinations have an owner and stage; the historical Phase 0 scope did not authorize application work; the latest owner request now authorizes Phase 1 only.
+- All null assets/destinations have an owner and stage; historical Phase 0 scope did not authorize application work. Phase 1 was subsequently authorized and verified; the latest owner continuation now authorizes Phase 2 homepage work only.
 - Run `node scripts/verify-docs.mjs`, `git diff --check`, inspect staged files and final history/status. Record limitations in [PHASE-0-VERIFICATION](PHASE-0-VERIFICATION.md).
 
 This gate does not prove exact `(1)` source equivalence, website behavior, media playback or public readiness. D01 must be reconciled before declaring the latest-source intake complete.

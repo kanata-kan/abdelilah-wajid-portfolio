@@ -4,7 +4,7 @@ Updated: 2026-09-09. Session began 2026-09-08. Owner: Abdelilah Wajid.
 
 ## Phase and authority
 
-**Phase 1 foundation complete; automated Gate 1 passed on 2026-09-09.** Browser visual/click inspection could not run because no browser surface was available. D01 is closed by explicit owner adoption of the available baseline. The latest owner request authorizes Phase 1 only; later phases, site publication, DNS changes and spending remain separate. The public GitHub repository destination was already authorized on September 9.
+**Phase 2 private homepage implemented; automated checks passed on 2026-09-09.** The Phase 1 browser limitation was overcome using isolated headless Edge tests in Phase 2. Final media/destinations, broader manual accessibility review and owner visual approval remain pending; this is not release acceptance. D01 is closed by explicit owner adoption, not missing-source equivalence. Phase 2 is authorized; Phase 3, site publication, DNS changes and spending remain separate. The public GitHub repository destination was already authorized on September 9.
 
 This is the current repository handoff, distinct from the September 6 “Phase 0 complete” that described ChatGPT project setup. The current owner request and September 8 adopted homepage design supersede that older backlog.
 
@@ -30,7 +30,17 @@ Phase 1 adds a pinned Next/React/strict TypeScript/pnpm application, real lockfi
 
 ## Next step
 
-Review the private shell at `http://127.0.0.1:3000/en/` or `/ar/` while the local server is running; restart with `node scripts/pnpm-local.mjs start` (or `dev`) if needed. Phase 2 homepage implementation needs the owner's next phase instruction. Resolve D02 before adding root/case/x-default behavior; keep unrelated release inputs staged. Do not reopen D01, the adopted design, approved GitHub destination or answered discovery questions.
+Review the private homepage at `http://127.0.0.1:3000/en/` or `/ar/` while the local server is running; restart with `node scripts/pnpm-local.mjs start` (or `dev`) if needed. Phase 2 is now authorized. See [PHASE-2-VERIFICATION](PHASE-2-VERIFICATION.md) for current progress, actual checks and remaining limits. Resolve D02 before adding root/case/x-default behavior; keep unrelated release inputs staged. Do not reopen D01, the adopted design, approved GitHub destination or answered discovery questions.
+
+## Phase 2 implementation checkpoint — 2026-09-09
+
+- All adopted homepage sections render in EN/AR with a responsive header, inline mobile menu, real section anchors, hash-preserving locale links, logical RTL and isolated Latin phrases.
+- Implementation saved in local commit `9ec8774`; verification/handoff documentation is a separate commit. The dev server was restarted on loopback port 3000 for owner review. Its generated `next-env.d.ts` paths may differ from the production type-generation output; no manual change is required.
+- Full application check passed: typecheck, lint, 27 exact source imports, four runtime identity assets, generated layout consistency, five unit tests, production build and HTTP smoke. All frozen source files remain unchanged.
+- Final browser suite: 26 passed in isolated headless Edge. Nine widths per language, keyboard/menu/locale flows, reduced motion, doubled-text reflow at 390px and six accessibility scans (mobile open/closed and desktop per language). No axe violations detected. Actual EN/AR 1024/390 screenshots were inspected locally; detailed limits remain in the verification record.
+- Installed-package audit reported zero known advisories. CI browser checks are configured, not remotely executed. No push, deployment, DNS change or ChatGPT source synchronization.
+- Neutral labeled slots remain for the portrait and three project captures. The real YouIn source was inspected but not copied into the public repository because internal identifiers/titles need disclosure/framing approval. Contact/case-study actions with null destinations remain plain pending text, not dead buttons.
+- Next: owner review of the private homepage and media/contact decisions; complete remaining manual/release checks at their proper stage. No Phase 3 work started.
 
 ## Historical Phase 1 intake check — before D01 adoption, 2026-09-09
 

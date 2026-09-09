@@ -2,7 +2,7 @@
 
 A new portfolio for Abdelilah Wajid, Product Engineer in Marrakech, Morocco. The site will explain his product decisions, engineering work and verification through real work, led by YouIn Guest Review.
 
-**Status: Phase 1 application foundation.** `/en/` and `/ar/` provide a private, pre-rendered bilingual shell with original identity/fonts. The complete homepage and case study belong to later phases. There is no deployment. See the dated [verification record](docs/PHASE-1-VERIFICATION.md) for checks and limits. This repository has independent Git history; no application code or history was imported from the previous portfolio.
+**Status: Phase 2 private homepage implemented; release inputs remain pending.** `/en/` and `/ar/` provide the adopted bilingual sections, responsive navigation and original identity/fonts. The case study remains Phase 3. There is no deployment. See the dated [verification record](docs/PHASE-1-VERIFICATION.md) for checks and limits. This repository has independent Git history; no application code or history was imported from the previous portfolio.
 
 Public repository: [kanata-kan/abdelilah-wajid-portfolio](https://github.com/kanata-kan/abdelilah-wajid-portfolio), created with the owner's explicit authorization on September 9, 2026. The default branch is `main`.
 
@@ -14,7 +14,7 @@ English is the primary site language. Arabic is a complete second locale with ge
 2. Use [source authority](docs/SOURCE-OF-TRUTH.md) to resolve references and conflicts.
 3. Check [open decisions](docs/OPEN-DECISIONS.md) and the [implementation roadmap](docs/IMPLEMENTATION-ROADMAP.md) before extending scope.
 
-For Abdelilah: الأساس التقني ديال اللغتين موجود. افتح `/ar/` أو `/en/` محلياً؛ الصفحة الرئيسية الكاملة باقية للمرحلة الثانية، والنشر ما تدارش.
+For Abdelilah: الصفحة الرئيسية باللغتين موجودة للمعاينة المحلية؛ الصور والروابط النهائية باقية معلّقة، والنشر ما تدارش.
 
 ## Architecture direction
 
@@ -56,7 +56,7 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open `http://127.0.0.1:3000/en/` or `http://127.0.0.1:3000/ar/`. `/` intentionally has no route while D02 is unresolved. The preview locale controls are foundation utilities, not the finished homepage header/menu.
+Open `http://127.0.0.1:3000/en/` or `http://127.0.0.1:3000/ar/`. `/` intentionally has no route while D02 is unresolved. The homepage includes desktop navigation, a mobile menu and locale switching that preserves the current section hash.
 
 On this Windows workspace, pinned tools are also installed under ignored `.local/toolchain`. Run `node scripts/pnpm-local.mjs dev` or replace `dev` with any pnpm command. This avoids changing global tools or PowerShell policy. To restore the optional local tools:
 
@@ -70,7 +70,9 @@ node scripts/pnpm-local.mjs check
 
 No environment variables are required locally. Optional `SITE_ORIGIN` must be a verified HTTPS origin; unset means canonical/alternate/OG URLs are omitted. Phase 1 is always noindex, has an empty sitemap and blocks crawlers in robots.txt. An origin alone cannot enable publication/indexing. These measures are not access control; the server binds to loopback by default.
 
-Dictionaries and layout tokens import the frozen contracts directly. `src/` contains the app shell, locale registry, metadata and local-font loading; `public/` contains only four approved identity/icon assets. Case-study MDX and interaction suites are staged with the later pages/flows they test.
+Dictionaries import the frozen JSON directly. `scripts/prepare-layout.mjs` generates a checked runtime stylesheet from the frozen numeric contract, removing only the reference font import and normalizing line endings; `next/font/local` loads the original fonts once. `public/` still contains only four approved identity/icon assets. Case-study MDX remains deferred.
+
+After `pnpm check`, run `pnpm exec playwright install chromium` and `pnpm test:browser`. On this Windows machine, installed Edge can be used without a browser download: `$env:PLAYWRIGHT_CHANNEL='msedge'; node scripts/pnpm-local.mjs test:browser`. Tests use an isolated headless browser and their own server on port 3102; screenshots/traces are ignored under `test-results/`. Hosted CI has not been run. See [Phase 2 verification](docs/PHASE-2-VERIFICATION.md).
 
 ## Quality and constraints
 

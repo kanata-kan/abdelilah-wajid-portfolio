@@ -1,7 +1,7 @@
 # Execution contract
 
 - Start with `docs/PROJECT-CONTEXT.md`, `docs/CURRENT-STATE.md`, then `docs/SOURCE-OF-TRUTH.md`. Read only the task-relevant ADRs, design contracts and evidence it identifies. Inspect Git status before editing.
-- Current authorization is Phase 1 only, following the owner's explicit September 9 adoption of the available baseline (D01 closed by decision, not source equivalence). A roadmap is not permission to implement later phases. Follow the owner's latest explicit request; report a missing source instead of pretending to read it.
+- Current authorization covers Phase 2 homepage implementation, following the owner's September 9 instruction to start and continue. D01 remains closed by baseline adoption, not source equivalence. Phase 3 and publication remain separate. A roadmap is not permission to implement later phases; follow the latest explicit request.
 - Preserve the frozen EN/AR JSON, section order, tokens, local Inter/IBM Plex Sans Arabic files and responsive rules. Do not redesign, rewrite copy, add features or change claims without an explicit owner decision and a recorded revision. Technical fixes within the contract may proceed.
 - Use only `assets/brand/aw-primary-color.svg` and the canonical outlined master. No redrawing, font substitute, path manipulation, recoloring, stretching or mirroring. Brand and product images stay unmirrored in RTL.
 - EN uses `/en/`, `lang=en`, `dir=ltr`; AR uses `/ar/`, `lang=ar`, `dir=rtl`. Preserve semantic DOM order, isolate Latin fragments and use logical CSS. No silent English fallback or geolocation redirects.
@@ -14,3 +14,13 @@
 - No public publishing, deployment, DNS, spending, client messages or applications without explicit authorization for that action. Remote destination/visibility and source disclosure must be resolved before a push.
 - Update `docs/CURRENT-STATE.md` when progress or decisions change. Synced ChatGPT `sources/` are read-only; deliver replacement source files separately and state whether synchronization actually occurred.
 - Use `docs/AI-EXECUTION-GUIDE.md` for the working procedure. Reply in Arabic/Darija first, briefly, with result, evidence, limits and next step.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

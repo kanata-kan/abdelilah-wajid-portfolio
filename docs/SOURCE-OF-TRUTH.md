@@ -4,7 +4,7 @@ Reviewed: 2026-09-08. Use the [machine inventory](provenance/source-index.json) 
 
 ## Resolve authority by subject
 
-1. The owner's latest explicit task and decisions control scope and authorization, within platform rules. The latest September 9 request authorizes Phase 1 in the existing repository and adopts the available package/current documented decisions as its baseline.
+1. The owner's latest explicit task and decisions control scope and authorization, within platform rules. The September 9 baseline adoption authorized Phase 1; the subsequent start/continue instruction authorizes Phase 2 homepage implementation. Missing-source equivalence remains unverified.
 2. Original brand files control SVG paths and the original three colors. The homepage design adoption record controls its documented compact-logo exception.
 3. The adopted written design contract controls exact copy, numbers, responsive behavior and interaction. Paired JSON and numeric CSS override approximate image text. Equal-authority conflicts require a recorded resolution; do not average values.
 4. The four final homepage views control otherwise unspecified composition. Older views cannot override them.
