@@ -1,6 +1,6 @@
 # Implementation roadmap
 
-Updated: 2026-09-09. **Only Phase 0 is authorized by the current task.** Each later phase requires an owner request to proceed. SEO starts with Phase 1; Phase 4 is final verification, not its first implementation.
+Updated: 2026-09-09. **Phase 1 only is now authorized by the September 9 owner request; D01 is closed by explicit baseline adoption.** Each later phase requires an owner request to proceed. SEO starts with Phase 1; Phase 4 is final verification, not its first implementation.
 
 | Phase | Small complete output | Exit gate |
 | --- | --- | --- |

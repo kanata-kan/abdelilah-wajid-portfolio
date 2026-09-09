@@ -4,7 +4,7 @@ Updated: 2026-09-09. Session began 2026-09-08. Owner: Abdelilah Wajid.
 
 ## Phase and authority
 
-**Phase 1 requested on 2026-09-09; dependent implementation awaits D01 baseline confirmation.** Phase 0 repository and documentation are delivered. The latest owner request authorizes Phase 1 only in this existing repository, after resolving D01; it does not authorize later phases, site publication, DNS changes or spending. On September 9 the owner also explicitly authorized the public GitHub repository `kanata-kan/abdelilah-wajid-portfolio`.
+**Phase 1 in progress, authorized on 2026-09-09; D01 closed by explicit owner adoption of the available baseline.** Phase 0 repository and documentation are delivered. The latest owner request authorizes Phase 1 only in this existing repository, after resolving D01; it does not authorize later phases, site publication, DNS changes or spending. On September 9 the owner also explicitly authorized the public GitHub repository `kanata-kan/abdelilah-wajid-portfolio`.
 
 This is the current repository handoff, distinct from the September 6 “Phase 0 complete” that described ChatGPT project setup. The current owner request and September 8 adopted homepage design supersede that older backlog.
 
@@ -30,7 +30,7 @@ See [PHASE-0-VERIFICATION](PHASE-0-VERIFICATION.md) for actual checks and Git ev
 
 ## Next step
 
-Close D01 by obtaining the exact current revisions or confirming the recovered baseline. Phase 1 is now explicitly requested; once D01 is resolved, recheck stable versions and implement the smallest locale-aware foundation with real checks. Do not reopen adopted visual direction, the approved GitHub destination or discovery questions already answered.
+D01 is closed by owner decision, while equivalence to missing revisions remains unverified. Recheck stable versions and implement the smallest locale-aware foundation with real checks. Do not reopen adopted visual direction, the approved GitHub destination or discovery questions already answered.
 
 ## Phase 1 intake check — 2026-09-09
 
@@ -42,3 +42,7 @@ Close D01 by obtaining the exact current revisions or confirming the recovered b
 - D01 cannot be closed by these hashes: they prove integrity against the recovered package, not equivalence to absent revisions. Owner confirmation is pending; no application scaffold, dependency installation or application QA has begun.
 
 Replacement ChatGPT `03-CURRENT-STATE.md` and `04-SOURCE-REGISTER.md` handoff files are delivered outside the read-only `sources/` mirror. Their source replacement/upload has **not** happened; local files and ChatGPT project sources do not automatically synchronize.
+
+## D01 owner decision — 2026-09-09
+
+The owner explicitly confirmed: use the available package and decisions currently documented in this repository as the Phase 1 baseline. D01 is closed by this decision. The missing archive/state/register revisions were not recovered or compared; neither byte nor content equivalence is asserted. Phase 1 may proceed, with original design/copy/logo preserved. Later phases, site publishing, DNS changes and spending remain unauthorized.

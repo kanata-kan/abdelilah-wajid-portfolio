@@ -1,6 +1,6 @@
 # Project context
 
-Updated: 2026-09-09. Owner: Abdelilah Wajid. Session: repository and documentation foundation, Phase 0.
+Updated: 2026-09-09. Owner: Abdelilah Wajid. Session: Phase 1 application foundation, explicitly authorized on September 9 after D01 baseline adoption.
 
 ## Purpose
 
@@ -14,7 +14,7 @@ Abdelilah Wajid / عبدالإله وجيد is based in Marrakech, Morocco. The 
 - Homepage EN/AR using the adopted design v1.0. The default site language is English; Arabic is complete and RTL, not a partially translated preview.
 - A separate YouIn Guest Review case study using local MDX, staged after the homepage. Its narrative source exists; its final page layout is not approved.
 - Technical SEO and evidence-led GEO from the first implemented page. No promise of ranking, AI citation or revenue.
-- Phase 0 now: documents, source inventory, original asset staging and checks. No application scaffold, provider setup, deployment, analytics or outreach.
+- Phase 1 now: pinned application toolchain, locale-aware shell, original identity/fonts/content, metadata foundation and actual checks. No Phase 2 homepage assembly, provider setup, deployment, analytics or outreach.
 
 Not in v1 without a new decision: French, blog, engineering lab, CMS, database, authentication, contact form/backend, chatbot, additional services, animation system or a general card-grid redesign.
 

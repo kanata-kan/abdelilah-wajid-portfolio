@@ -8,7 +8,7 @@ Updated: 2026-09-09. An item is verified only when its actual result is recorded
 - Imported brand/design inputs match original hashes; EN/AR keys and value types agree.
 - Provenance distinguishes available originals, reported evidence and missing exact revisions.
 - New Git root/history, no old-repo history, secrets, raw archive or unrelated user files staged.
-- All null assets/destinations have an owner and stage; current authorization stays Phase 0.
+- All null assets/destinations have an owner and stage; the historical Phase 0 scope did not authorize application work; the latest owner request now authorizes Phase 1 only.
 - Run `node scripts/verify-docs.mjs`, `git diff --check`, inspect staged files and final history/status. Record limitations in [PHASE-0-VERIFICATION](PHASE-0-VERIFICATION.md).
 
 This gate does not prove exact `(1)` source equivalence, website behavior, media playback or public readiness. D01 must be reconciled before declaring the latest-source intake complete.
@@ -17,7 +17,7 @@ This gate does not prove exact `(1)` source equivalence, website behavior, media
 
 After explicit Phase 1 authorization and required source reconciliation, pin actual compatible runtime/package versions and generate the lockfile. Create genuine scripts and a CI workflow in that phase. No passing badge until a real run exists; no production deployment action or secret required for CI.
 
-From a clean clone with the pinned toolchain: frozen-lockfile install → generated types where needed → `pnpm typecheck` → `pnpm lint` → content/reference validation → `pnpm build`. Verify production start, EN/AR initial HTML, locale root attributes, local font requests, SVG loading and unknown-locale 404. Record package/security audit results against the actual installed versions and resolve material production risks.
+From a clean dependency installation with the pinned toolchain (the current owner request prohibits another clone): frozen-lockfile install → generated types where needed → `pnpm typecheck` → `pnpm lint` → content/reference validation → `pnpm build`. Verify production start, EN/AR initial HTML, locale root attributes, local font requests, SVG loading and unknown-locale 404. Record package/security audit results against the actual installed versions and resolve material production risks.
 
 Use read-only CI permissions, reproducible tooling and no untrusted pull-request secrets. Select current supported CI actions when creating the workflow; no hosted-account setting is assumed already enabled. Do not use an empty test command that always succeeds.
 

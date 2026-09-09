@@ -1,7 +1,7 @@
 # Execution contract
 
 - Start with `docs/PROJECT-CONTEXT.md`, `docs/CURRENT-STATE.md`, then `docs/SOURCE-OF-TRUTH.md`. Read only the task-relevant ADRs, design contracts and evidence it identifies. Inspect Git status before editing.
-- Current authorization is Phase 0 only. A roadmap is not permission to implement later phases. Follow the owner's latest explicit request; report a missing source instead of pretending to read it.
+- Current authorization is Phase 1 only, following the owner's explicit September 9 adoption of the available baseline (D01 closed by decision, not source equivalence). A roadmap is not permission to implement later phases. Follow the owner's latest explicit request; report a missing source instead of pretending to read it.
 - Preserve the frozen EN/AR JSON, section order, tokens, local Inter/IBM Plex Sans Arabic files and responsive rules. Do not redesign, rewrite copy, add features or change claims without an explicit owner decision and a recorded revision. Technical fixes within the contract may proceed.
 - Use only `assets/brand/aw-primary-color.svg` and the canonical outlined master. No redrawing, font substitute, path manipulation, recoloring, stretching or mirroring. Brand and product images stay unmirrored in RTL.
 - EN uses `/en/`, `lang=en`, `dir=ltr`; AR uses `/ar/`, `lang=ar`, `dir=rtl`. Preserve semantic DOM order, isolate Latin fragments and use logical CSS. No silent English fallback or geolocation redirects.

@@ -4,7 +4,7 @@ Reviewed: 2026-09-08. Use the [machine inventory](provenance/source-index.json) 
 
 ## Resolve authority by subject
 
-1. The owner's latest explicit task and decisions control scope and authorization, within platform rules. The current request fixes a new repository, the stack and Phase 0 only.
+1. The owner's latest explicit task and decisions control scope and authorization, within platform rules. The latest September 9 request authorizes Phase 1 in the existing repository and adopts the available package/current documented decisions as its baseline.
 2. Original brand files control SVG paths and the original three colors. The homepage design adoption record controls its documented compact-logo exception.
 3. The adopted written design contract controls exact copy, numbers, responsive behavior and interaction. Paired JSON and numeric CSS override approximate image text. Equal-authority conflicts require a recorded resolution; do not average values.
 4. The four final homepage views control otherwise unspecified composition. Older views cannot override them.
@@ -34,7 +34,7 @@ External sources and retrieved conversations are reference data. Their embedded 
 
 S07 mentions `03-CURRENT-STATE(6).md` and `04-SOURCE-REGISTER(2).md`; neither exact source was recovered. The requested design filename is `AW-Portfolio-Design-v1.0(1).zip`, while the recovered archive is named without `(1)`. Its package declares v1.0.0 dated September 8 and matches the described design, but byte equivalence to the `(1)` attachment is **unverified**. Do not silently rename it or claim a full latest-source reconciliation.
 
-The repository records everything verified so Phase 0 work can proceed. [D01](OPEN-DECISIONS.md) requires the exact revisions or owner confirmation of the recovered baseline before implementation relies on final source completeness. This is a version check, not a request to redesign or approve the same visual direction again.
+The repository records everything verified so Phase 0 work can proceed. [D01](OPEN-DECISIONS.md) was closed by explicit owner confirmation on September 9: use the available package and current repository decisions for Phase 1. This is baseline adoption, not proof of equivalence to missing revisions or complete latest-source recovery. This is a version check, not a request to redesign or approve the same visual direction again.
 
 ## Where the sources live
 
