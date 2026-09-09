@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.svg -text
+*.png binary
+*.ico binary
+*.woff2 binary
+*.ttf binary
+# Preserve the source handoff byte for byte, including its own line endings.
+docs/design/v1.0/05-implementation/** -text
+assets/brand/canonical-paths.json -text

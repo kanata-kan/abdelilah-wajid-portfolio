@@ -1,0 +1,25 @@
+# Local references, credentials, generated output and editor state.
+.local/
+reference-materials/
+handoff/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+node_modules/
+.pnpm-store/
+.next/
+out/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.zip
