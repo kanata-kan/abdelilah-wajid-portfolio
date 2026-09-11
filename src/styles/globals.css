@@ -3,15 +3,19 @@
 :root {
   --ui-font: var(--font-inter), sans-serif;
 }
+
 :root:lang(ar) {
   --ui-font: var(--font-arabic), sans-serif;
 }
+
 body {
   font-synthesis: none;
 }
+
 .latin {
   font-family: var(--font-inter), sans-serif;
 }
+
 .skip-link {
   position: absolute;
   inset-inline-start: var(--gutter);
@@ -19,13 +23,13 @@ body {
   transform: translateY(-200%);
   padding: 12px;
   background: var(--aw-ivory);
+  z-index: 10;
 }
+
 .skip-link:focus {
   transform: translateY(0);
 }
-.skip-link {
-  z-index: 10;
-}
+
 .desktop-nav a,
 .desktop-locale a {
   display: inline-flex;
@@ -33,44 +37,98 @@ body {
   min-height: 44px;
   text-decoration: none;
 }
+
 .desktop-locale {
   display: flex;
   gap: 12px;
 }
+
 .desktop-locale [aria-current],
 .mobile-locale [aria-current] {
   text-decoration: underline;
   font-weight: 600;
 }
+
 .mobile-locale {
   display: flex;
   gap: 24px;
   border-block-start: 1px solid var(--aw-line);
   margin-block-start: 8px;
 }
-.project-row h3 {
-  font-family: var(--font-inter), sans-serif;
-}
+
 .project-row {
   overflow-wrap: anywhere;
 }
+
+.project-row h3 {
+  font-family: var(--font-inter), sans-serif;
+}
+
 .site-header,
 .desktop-nav {
   flex-wrap: wrap;
 }
+
 a[lang="ar"] {
   font-family: var(--font-arabic), sans-serif;
 }
+
 a[lang="en"] {
   font-family: var(--font-inter), sans-serif;
 }
+
+/*
+ * YouIn preview
+ * Keep the real screenshot ratio at every viewport.
+ * No crop and no artificial black frame.
+ */
+.youin-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+/*
+ * Mobile + tablet
+ * Keep the portrait at 4:3 from 320px up to 959px.
+ */
 @media (max-width: 959px) {
   .desktop-locale {
     display: none;
   }
+
+  .hero .portrait {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 50% 35%;
+  }
 }
+
+/*
+ * Desktop
+ * Switch the portrait to the real 3:2 desktop composition.
+ */
 @media (min-width: 960px) {
   .mobile-menu {
     display: none;
+  }
+
+  .hero > figure {
+    min-width: 0;
+    align-self: start;
+  }
+
+  .hero .portrait {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: 50% 35%;
   }
 }
