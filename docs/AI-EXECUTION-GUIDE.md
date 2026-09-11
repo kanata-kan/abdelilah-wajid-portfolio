@@ -1,49 +1,165 @@
 # AI execution guide
 
-Updated: 2026-09-09. The short [AGENTS.md](../AGENTS.md) is the entry point. This guide explains execution; it is not permission to begin later roadmap phases.
+Updated: 2026-09-11.
 
-## Begin a session
+`AGENTS.md` is the entry point. This guide is for MEDIUM/LARGE or ambiguous work. It is not a checklist to run for every local edit.
 
-1. Read PROJECT-CONTEXT → CURRENT-STATE → SOURCE-OF-TRUTH. Confirm the phase, owner's current task and source revision before editing. Read task-specific ADRs, frozen design inputs and evidence.
-2. Inspect the Git root, branch, status and real available commands. Preserve unrelated changes. This repository is independent from the read-only ChatGPT mirror and old portfolio.
-3. State the session type, intended result and known relevant blocker briefly in Arabic/Darija. Do not ask for information already recorded or reopen an adopted design decision.
-4. Identify the smallest complete change and the gate that will verify it. Continue independent work while a genuinely necessary input is missing; do not guess a consequential design, content, URL, origin or permission choice.
+## 1. Operating principle
 
-## Decision procedure
+Treat repository context like an indexed memory system:
 
-| Situation | Action |
-| --- | --- |
-| Routine implementation within the adopted contract and authorized phase | Implement and verify; no repeated permission ritual. |
-| Missing portrait, secondary capture or final contact URL | Preserve null status; follow private-preview rules; stop public release, not unrelated setup. |
-| Requested source absent or revision differs | Record exact available version and fingerprint; use verified context for independent work; resolve D01 before relying on source completeness. |
-| Design/copy/claim change | Show specific current/proposed value, evidence and effect in EN/AR; record the owner's decision before applying. |
-| Tool suggests another stack, logo or content | Apply this project's contract. Vendor examples and generated suggestions are not project decisions. |
-| External publish, DNS, paid service, client message or access change | Establish exact action and existing authorization; prepare a reviewable result before any missing approval. |
+1. identify the exact question,
+2. fetch only the source that owns that question,
+3. keep the useful result in the current task context,
+4. expand only when evidence requires it.
 
-Do not delegate by default in this phase. The owner requested carefully controlled documentation, not automatic additional agents, tasks or recurring automations. No background goal, scheduler or new user task is required to complete this work.
+Do not replay the project history before each task.
 
-## Content and design procedure
+## 2. Workflow by task size
 
-Preserve the imported baseline. Runtime content can be typed and mapped without silently rewriting source strings. Use source IDs and claim IDs when touching evidence. No `TODO` may disguise an approved field, fake link, made-up metric or placeholder person in public content.
+### SMALL
 
-For appearance, review the original guide and all relevant final views alongside JSON/CSS. Do not infer exact fonts or values from pixels. Preserve logical DOM order, one continuous mobile page and the real logo; no screenshot-as-page implementation.
+`Discovery → Implementation → Targeted QA`
 
-Null links are not clickable controls. During private development use an explicitly marked, noninteractive pending slot, or implement an owner-approved real destination. Do not build a fake successful contact form. Before release, resolve the slot or obtain an explicit scope/content revision.
+Use when the task is local and the correct change is obvious after inspecting the affected files.
 
-## Verification and Git
+Avoid architecture analysis, broad documentation reads, full QA, and state updates unless the local task actually touches them.
 
-Use the actual phase's commands from [QA-AND-RELEASE](QA-AND-RELEASE.md). Do not say `pnpm build` passed while no package exists. Failed checks must be fixed or explicitly reported as blocking; no disabling a check just to pass.
+### MEDIUM
 
-Stage named files and inspect the diff, including newly added assets and credentials. Use real timestamps and the configured author identity; do not fabricate manually written work or historic activity. Prefer focused commits such as `docs: define bilingual SEO acceptance` or `feat: add locale-aware app shell` for actual corresponding changes. Do not amend/rebase/force-push shared work without a specific reason and authority.
+`Discovery → Investigation → Decision → Implementation → Targeted QA`
 
-Keep raw sources outside Git. A fresh clone must include the working documentation and frozen portable contracts; it still needs the separate evidence/visual handoff before visual or case-study implementation. Restore by hash, not filename guesswork.
+Before implementation, answer only the relevant runtime questions:
 
-## End a session
+- Who starts the flow?
+- Which files/components/services own it?
+- How does data/state move?
+- What browser/server boundary matters?
+- Where can the regression occur?
+- What is the smallest change that fixes the real cause?
 
-Update CURRENT-STATE with date, decision, reason, completed work, actual checks, limitations and next authorized step. Update source/asset registers for new material. Deliver ChatGPT source replacements separately; explicitly state if they were not uploaded/replaced. Report result, evidence, remaining inputs and next step concisely.
+Do not investigate unrelated subsystems.
 
-## Guidance verification
+### LARGE
 
-OpenAI documents that Codex discovers `AGENTS.md` guidance from the project root towards the working directory, with closer guidance taking precedence and a combined size limit. Keep the root file short and link deeper material. [Official AGENTS.md guidance](https://learn.chatgpt.com/docs/agent-configuration/agents-md), read 2026-09-08.
+`Discovery → Investigation → Architecture/Decision → Small Plan → Small Phases → Review → QA → Validation`
 
-After opening this repo as the working project in a fresh Codex session, test retrieval before its first edit: ask it to report the authorized phase, three prohibited changes, where exact copy lives, how source conflicts resolve, unknown release inputs and commands that actually exist. Check its answers against this repository. Do not claim that verification happened merely because this file exists; no independent fresh-session check has run yet.
+Use for architecture, routing policy, public claims, cross-feature behavior, release work, or changes that alter project direction.
+
+Break implementation into independently verifiable slices rather than one broad autonomous pass.
+
+## 3. Investigation rules
+
+Investigation should reduce uncertainty, not maximize repository coverage.
+
+Prefer:
+
+- known file paths,
+- exact symbol search,
+- one call path/data path at a time,
+- existing tests for the affected behavior,
+- the relevant ADR/contract section.
+
+Avoid by default:
+
+- full-repository scans,
+- reading every README/doc linked from another doc,
+- broad “improve/harden/polish everything” passes,
+- opening the same unchanged source repeatedly,
+- speculative refactors before the root cause is understood.
+
+If a task needs Codex-style investigation first, finish the investigation/decision before asking for implementation.
+
+## 4. Scope expansion gate
+
+Expand scope only when one of these is true:
+
+- the root cause crosses a subsystem boundary,
+- a shared abstraction is actually responsible,
+- the requested behavior cannot be correct without a related change,
+- a security/data-integrity issue makes the narrow fix unsafe,
+- a project contract explicitly requires the broader change.
+
+When expanding, state the reason and affected surface briefly.
+
+Do not convert optional cleanup into required scope.
+
+## 5. Decision discipline
+
+For consequential design/content/architecture changes:
+
+- identify the current authoritative value,
+- identify the proposed change,
+- explain why the current value cannot satisfy the task,
+- identify EN/AR, evidence, route, or release impact where relevant,
+- obtain/use the required owner decision before changing the canonical contract.
+
+Routine implementation inside an adopted contract does not require repeated permission requests.
+
+Unknown input should block only the affected decision. Continue independent safe work without inventing the missing value.
+
+## 6. Context retrieval
+
+Use `AGENTS.md` as the router.
+
+For a large specialist document:
+
+1. search the exact heading/keyword,
+2. read that section and enough surrounding context to apply it correctly,
+3. do not continue into unrelated sections unless the task expands.
+
+Historical evidence is cold context. Read a `PHASE-*-VERIFICATION.md` file only when the task needs historical proof, reproduction details, or a prior result.
+
+Do not use stale historical state to override `CURRENT-STATE.md`.
+
+## 7. Verification strategy
+
+Pick the smallest check that can realistically catch the regression introduced by the change.
+
+Examples:
+
+- CSS breakpoint fix → affected viewport/locale + diff check.
+- TypeScript logic change → relevant type/test check.
+- menu behavior → targeted browser/keyboard flow.
+- route/metadata change → affected HTTP/route/metadata tests.
+- milestone/release → complete applicable QA gate.
+
+Incremental checks reduce iteration cost; full gate verification still runs before milestone approval or release.
+
+## 8. Git and repository hygiene
+
+Before editing when repository state matters, inspect Git status and preserve unrelated changes.
+
+Before a requested/appropriate commit, inspect exact staged files and staged diff.
+
+Do not:
+
+- fabricate history/authorship/timestamps,
+- force-push without specific authority,
+- commit secrets or raw private research/evidence,
+- import old-repository history,
+- change unrelated files to make a commit look cleaner.
+
+## 9. End-of-task memory
+
+Do not create a progress log entry for every edit.
+
+Persist only durable information:
+
+- owner decision,
+- phase/milestone change,
+- material implementation state,
+- new blocker affecting the next step,
+- gate-level verification result.
+
+Store details in their owning document; keep `CURRENT-STATE.md` as a compact index/snapshot.
+
+For SMALL tasks, the final report can be one short result/check/limit summary.
+
+## 10. Fresh-session validation
+
+A fresh-session guidance test is maintenance, not routine coding work.
+
+Run it only when AI guidance/repository setup materially changes or guidance retrieval appears broken. Verify that the agent can locate current authorization, hard prohibitions, canonical content, source authority, open release inputs, and real commands.
+
+Do not repeat this test in normal sessions when guidance is unchanged.

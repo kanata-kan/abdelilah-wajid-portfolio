@@ -1,31 +1,27 @@
 # Implementation roadmap
 
-Updated: 2026-09-09. **Phase 1 only is now authorized by the September 9 owner request; D01 is closed by explicit baseline adoption.** Each later phase requires an owner request to proceed. SEO starts with Phase 1; Phase 4 is final verification, not its first implementation.
+Updated: 2026-09-11.
 
-| Phase | Small complete output | Exit gate |
+A roadmap describes sequence; it never grants permission. Current authorization is always `CURRENT-STATE.md`.
+
+| Phase | Output | Status / exit gate |
 | --- | --- | --- |
-| 0 — Documentation | Independent Git root, context, three ADRs, AI guidance, claim/source/asset registers, exact design inputs, documentation checks and real commits | Local deliverables verified; missing exact source revisions openly recorded; no application or deployment claimed |
-| 1 — Application foundation | Real pinned toolchain/lockfile, strict TS, Next App Router, finite en/ar routes, local fonts, canonical SVG, typed dictionaries, metadata derivation and real CI/check commands | Clean install/typecheck/lint/content check/build; initial HTML and lang/dir verified; unknown locales 404 |
-| 2 — Homepage | Adopted sections EN/AR, menu, locale/anchor navigation, actual source media or labeled private slots | Bilingual responsive and keyboard checks, contract comparison and critical flow tests |
-| 3 — Guest Review proof | Reviewed page template, paired local MDX, five-part evidence sequence, precise attribution and real links | Visual/content review, evidence/rights review, actual media and route verification |
-| 4 — Release QA | Real assets/destinations, migration map, selected host/origin, indexing/crawler rules, accessibility and performance review | All release blockers resolved; concrete candidate and rollback plan ready |
-| 5 — Launch | Specifically authorized deploy/migration and production verification; webmaster setup where authorized | Actual production paths verified; release record and rollback retained |
-| 6 — Learn | Review technical issues after launch; then available search/inquiry evidence | Honest measurements; no automation/outreach implied by this roadmap |
+| 0 — Documentation | Independent repo, contracts, ADRs, provenance, guidance and real Git history | Completed/verified; historical limits recorded |
+| 1 — Application foundation | Pinned toolchain, strict TS/Next shell, EN/AR routes, fonts/assets, metadata, tests/CI | Completed/verified |
+| 2 — Homepage | Adopted EN/AR sections, navigation/menu, real/private-preview media, targeted/full QA | Implemented; automated Gate 2 checks passed; owner review/targeted fixes continue |
+| 3 — Guest Review proof | Reviewed EN/AR case-study template/MDX, evidence/media, precise attribution | Not authorized yet; requires Phase 3 owner request |
+| 4 — Release QA | Real release inputs, host/origin, migration/crawler policy, accessibility/performance review | Future; all release blockers resolved and candidate/rollback ready |
+| 5 — Launch | Specifically authorized deployment/migration + production verification | Future; actual production paths verified |
+| 6 — Learn | Review real technical/search/inquiry evidence after launch | Future; no outreach/automation implied |
 
-## Before the first application implementation commit
+## Current working rule
 
-1. Resolve D01: exact requested source revisions or confirmation that the recovered v1.0 baseline is current. This does not reopen visual direction.
-2. Receive explicit instruction to start Phase 1. Restore the separately delivered original references in the execution environment and verify fingerprints.
-3. Recheck current stable/security versions and use the selected compatible toolchain. Pin exact versions, generate the actual lockfile and verify installation; record changes from the September 8 snapshot.
-4. Resolve D02 before implementing root redirect, case-study URLs or `x-default`. An independent `/en/` + `/ar/` shell can be developed without pretending those choices are settled.
-5. Inspect real repo commands, select only the dependencies needed for the first shell, and add meaningful checks/CI alongside the foundation. Do not copy a scaffold's template content or default logo.
+While Phase 2 remains active, prefer targeted visual/behavior fixes and proportional QA. Do not start Phase 3, provider setup, deployment, DNS, analytics, outreach, or release work because it appears later in this roadmap.
 
-Portraits, secondary captures, final contact destinations, provider/plan, indexing accounts and analytics are release inputs. They do not block independent private foundation work. Case-study layout approval belongs to Phase 3. See [OPEN-DECISIONS](OPEN-DECISIONS.md).
+Resolve only the open decision that the current task actually touches. Release-stage inputs do not block unrelated private Phase 2 work.
 
-## Suggested commit slices for later phases
+## Implementation slices
 
-These are examples, not fake history or pre-created branches: pin toolchain and checks → add locale-aware shell and metadata → connect original identity/fonts/tokens → implement hero/work → implement remaining sections/menu → add case-study template/content → verify flows and production routing.
+For future authorized work, keep slices small and truthful: investigate → decide → implement the smallest complete change → targeted QA → gate verification at milestone boundary.
 
-Each slice must correspond to real changes and appropriate checks. Avoid one huge generated application commit or many meaningless “fix/final” commits. Keep the old production deployment intact until release authority is explicit.
-
-The strategy's 8–12 focused working days is a planning estimate, not a commitment. Re-estimate after the foundation and after seeing real asset/visual review effort.
+Avoid one huge generated commit and avoid meaningless “fix/final” commit chains. Keep the old production deployment recoverable until release authority is explicit.

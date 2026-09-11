@@ -1,12 +1,12 @@
 # Content and claims
 
-Updated: 2026-09-09. Content owner: Abdelilah Wajid. Evidence source: S09, Guest Review Source v1 dated 2026-09-07. This document is a publication control, not a new audit of YouIn.
+Updated: 2026-09-11. Content owner: Abdelilah Wajid. Evidence source: S09, Guest Review Source v1 dated 2026-09-07. This document is a publication control, not a new audit of YouIn.
 
 ## Content authority
 
 Homepage strings are frozen in the [English](design/v1.0/05-implementation/content/en.json) and [Arabic](design/v1.0/05-implementation/content/ar.json) contract files, including explicit mobile variants, metadata and accessible labels. Do not rewrite them for SEO, fit text to generated line breaks, normalize project names differently, or change 2026 copyright automatically.
 
-At implementation, copy the approved dictionaries into typed local content and verify key/type parity and exact values against the baseline. Keep content out of components. A missing Arabic key must fail validation rather than fall back silently to English. Runtime mappings may resolve approved destinations; they must not mutate the source contract.
+At implementation, consume the machine-synced runtime mirror of the approved dictionaries and verify key/type parity and exact values against the frozen baseline. Keep content out of components. A missing Arabic key must fail validation rather than fall back silently to English. Runtime mappings may resolve approved destinations; they must not mutate the source contract.
 
 S09 contains English portfolio-ready narrative and an Arabic reading copy. Later page assembly in S10 refines presentation, but does not constitute a final standalone-page visual design. Prepare paired local MDX in Phase 3, preserving meaning and attribution, with an explicit bilingual editorial review before release.
 
@@ -49,7 +49,7 @@ The original five-part evidence sequence is Product Decisions → Review Managem
 
 Keep original captures in the private reference handoff. Before selecting production derivatives inspect actual pixels for irrelevant private information, access links, customer identifiers and browser context. Record cropping/redaction, source hash, output hash and permission scope. Never fabricate a before/after screen, mirror product text, recolor the product, or use a generated screenshot as proof.
 
-The design boards include an illustrative portrait and secondary project imagery. Do not publish the generated person as Abdelilah. Missing real assets may be represented by explicitly labeled slots in a private preview only. Never crop fictitious projects out of a design board and call them real evidence.
+The current private homepage uses the owner-approved portrait/background edit and a derivative of the real YouIn Review Management capture; their runtime provenance is recorded in `ASSET-MANIFEST.md`. Electro Abidin and ElMoussaif still lack real captures and may remain explicitly labeled private-preview slots only. Never substitute generated/unrelated project proof or present illustrative imagery as real evidence.
 
 The workflow GIF has not been played end to end in this task. Before using it, test the actual delivered media and provide a still/poster and accessible text. Respect reduced motion; do not claim playback from file size or metadata.
 

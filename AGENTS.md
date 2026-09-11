@@ -1,19 +1,72 @@
 # Execution contract
 
-- Start with `docs/PROJECT-CONTEXT.md`, `docs/CURRENT-STATE.md`, then `docs/SOURCE-OF-TRUTH.md`. Read only the task-relevant ADRs, design contracts and evidence it identifies. Inspect Git status before editing.
-- Current authorization covers Phase 2 homepage implementation, following the owner's September 9 instruction to start and continue. D01 remains closed by baseline adoption, not source equivalence. Phase 3 and publication remain separate. A roadmap is not permission to implement later phases; follow the latest explicit request.
-- Preserve the frozen EN/AR JSON, section order, tokens, local Inter/IBM Plex Sans Arabic files and responsive rules. Do not redesign, rewrite copy, add features or change claims without an explicit owner decision and a recorded revision. Technical fixes within the contract may proceed.
-- Use only `assets/brand/aw-primary-color.svg` and the canonical outlined master. No redrawing, font substitute, path manipulation, recoloring, stretching or mirroring. Brand and product images stay unmirrored in RTL.
-- EN uses `/en/`, `lang=en`, `dir=ltr`; AR uses `/ar/`, `lang=ar`, `dir=rtl`. Preserve semantic DOM order, isolate Latin fragments and use logical CSS. No silent English fallback or geolocation redirects.
-- Follow ADR-001: Next.js stable, React, strict TypeScript, pnpm, App Router, Server Components, CSS Modules/tokens, local fonts/content/MDX, static-first. Do not introduce CMS, database, Tailwind or animation frameworks by default.
-- SEO/GEO begins with the first route: HTML content, locale metadata, self-canonical URLs, reciprocal alternates, sitemap/robots and truthful structured data. Unresolved root/URL policy stays explicit; never invent a production origin.
-- Never invent metrics, testimonials, adoption or revenue. Preserve attribution and evidence limits in `docs/CONTENT-AND-CLAIMS.md`. Generated previews are design references, never product proof or a real portrait.
-- Null asset/link slots remain unresolved. No fake addresses, `href="#"`, dead buttons or false-success forms. Keep secondary rows informational. Follow the documented private-preview policy.
-- Run `node scripts/verify-docs.mjs` and `git diff --check` for Phase 0. Application work must pass the real staged gates in `docs/QA-AND-RELEASE.md`; never claim an absent script or skipped check passed.
-- Make small, truthful commits. No old-repo imports, backdating, fabricated authorship, force pushes, secrets or raw research archives in Git. Inspect exact staged files before committing.
-- No public publishing, deployment, DNS, spending, client messages or applications without explicit authorization for that action. Remote destination/visibility and source disclosure must be resolved before a push.
-- Update `docs/CURRENT-STATE.md` when progress or decisions change. Synced ChatGPT `sources/` are read-only; deliver replacement source files separately and state whether synchronization actually occurred.
-- Use `docs/AI-EXECUTION-GUIDE.md` for the working procedure. Reply in Arabic/Darija first, briefly, with result, evidence, limits and next step.
+Always-loaded rules. Fetch detailed context only when needed.
+
+## Scope and task size
+
+Use the **smallest safe investigation and smallest correct change**. Do not turn a local request into a repo audit, redesign, refactor, polish/docs sweep, or later phase. Expand scope only when the root cause requires it.
+
+- **SMALL** — local copy/style/asset/type/component or one narrow behavior.
+- **MEDIUM** — one feature / several related files; runtime/data flow matters.
+- **LARGE** — architecture, route/SEO policy, public claims, cross-feature refactor, milestone/release, or phase change.
+
+## Context router
+
+| Need | Read |
+| --- | --- |
+| phase / authorization / next step | `docs/CURRENT-STATE.md` |
+| stable product scope | `docs/PROJECT-CONTEXT.md` |
+| source conflict | `docs/SOURCE-OF-TRUTH.md` |
+| claims / attribution | `docs/CONTENT-AND-CLAIMS.md` |
+| routes / SEO / GEO | `docs/SEO-GEO.md` |
+| unresolved choices | `docs/OPEN-DECISIONS.md` |
+| media provenance | `docs/ASSET-MANIFEST.md` |
+| QA / release | relevant `docs/QA-AND-RELEASE.md` section |
+| architecture | relevant ADR only |
+| historical proof | relevant `docs/PHASE-*-VERIFICATION.md` only |
+
+Context budget:
+
+- **SMALL:** touched files only; `CURRENT-STATE` only if scope/phase matters.
+- **MEDIUM:** `CURRENT-STATE` + minimum specialist source.
+- **LARGE:** `CURRENT-STATE` + `PROJECT-CONTEXT`; add only required ADR/source/specialist sections.
+
+For large docs, find the heading/keyword and read that section only. Do not recursively follow links or reread unchanged context.
+
+## Hard invariants
+
+- Latest explicit owner request controls scope; roadmap/backlog is not permission.
+- No new phase, publish/deploy, DNS, spending, client message, or external action without explicit authorization for that action.
+- Preserve approved EN/AR copy, section order, tokens, responsive rules, local fonts and canonical brand assets unless explicitly revised.
+- EN `/en/` is LTR; AR `/ar/` is real RTL. Preserve semantic DOM order, logical CSS and unmirrored brand/product imagery.
+- Never invent metrics, adoption, testimonials, revenue, destinations, production origin, project proof, or successful form behavior.
+- Keep the existing Next.js/React/strict TypeScript/pnpm/App Router/static-first architecture. No CMS/database/Tailwind/animation framework/new dependency by default.
+- `docs/design/v1.0/05-implementation/` is frozen source; `src/generated/design-v1/` is the checked runtime mirror. Never hand-edit generated mirrors or import `docs/` from application source.
+- Preserve unrelated changes and secrets. Report a discovered secret's location/risk without repeating its value.
+
+## Execution and QA
+
+- **SMALL:** `Discovery → Implementation → Targeted QA`
+- **MEDIUM:** `Discovery → Investigation → Decision → Implementation → Targeted QA`
+- **LARGE:** `Discovery → Investigation → Architecture/Decision → Small Plan → Small Phases → QA/Validation`
+
+Use `docs/AI-EXECUTION-GUIDE.md` for MEDIUM/LARGE/ambiguous work. Investigate only the relevant runtime/data/browser path; no opportunistic “while here” fixes. Missing input blocks only the affected branch.
+
+Verification:
+
+- **SMALL:** narrowest relevant check + `git diff --check`.
+- **MEDIUM:** affected tests/type/lint/browser checks + `git diff --check`.
+- **LARGE / milestone / release:** complete applicable QA gate.
+
+Do not repeat full builds/browser matrices/screenshots after every local edit unless risk requires it. Never report skipped/unavailable/failed checks as passed.
+
+Update `docs/CURRENT-STATE.md` only for durable state changes, not routine fixes. Do not auto-commit every edit; when committing, inspect exact staged files and keep commits truthful/focused.
+
+Reply in Arabic/Darija first; routine report: **result → checks/evidence → relevant limit → next step**.
+
+## Next.js docs
+
+When the generated rule below requires framework docs, read only the smallest relevant guide/section and reuse it within the same task.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

@@ -1,52 +1,76 @@
 # Project context
 
-Updated: 2026-09-09. Owner: Abdelilah Wajid. Session: Phase 2 homepage implementation, following the owner's start/continue instruction after the verified Phase 1 foundation.
+Updated: 2026-09-11. Owner: Abdelilah Wajid.
+
+This file holds stable product context. Current phase/status lives in `CURRENT-STATE.md`; historical proof lives in phase verification files.
 
 ## Purpose
 
-The portfolio and its code should demonstrate a Product Engineer's judgment: understand the problem, make a considered decision, implement a focused change and verify the real outcome. Work evidence must help a suitable founder, technical lead, agency or hiring team understand Abdelilah's contribution quickly.
+Build a portfolio that demonstrates Product Engineer judgment, not a generic technology gallery:
 
-Abdelilah Wajid / عبدالإله وجيد is based in Marrakech, Morocco. The adopted role is Product Engineer. Product Rescue is the initial offer being tested; its presence in the approved homepage is fixed, while market demand, pricing and commercial outcomes remain hypotheses. Do not republish old trial prices as an approved offer.
+1. understand the problem,
+2. make a considered product/engineering decision,
+3. implement a focused solution,
+4. verify the real outcome.
 
-## Current scope
+The evidence should help a suitable founder, technical lead, agency, or hiring team understand Abdelilah's contribution quickly.
 
-- A completely new standalone repository and real, chronological Git history. The old `kanata-system` repository is not a code, asset or architecture dependency.
-- Homepage EN/AR using the adopted design v1.0. The default site language is English; Arabic is complete and RTL, not a partially translated preview.
-- A separate YouIn Guest Review case study using local MDX, staged after the homepage. Its narrative source exists; its final page layout is not approved.
-- Technical SEO and evidence-led GEO from the first implemented page. No promise of ranking, AI citation or revenue.
-- Phase 1 foundation is verified. Phase 2 homepage assembly and interaction QA are now authorized by the owner's September 9 continuation. No Phase 3, provider setup, deployment, analytics or outreach.
+Identity: Abdelilah Wajid / عبدالإله وجيد, Product Engineer, Marrakech, Morocco.
 
-Not in v1 without a new decision: French, blog, engineering lab, CMS, database, authentication, contact form/backend, chatbot, additional services, animation system or a general card-grid redesign.
+## Commercial positioning
+
+`Product Rescue` is the initial offer being tested and is part of the adopted homepage. Demand, pricing, conversion and commercial results remain hypotheses until real market evidence exists. Do not restore old trial prices or present hypotheses as validated outcomes.
+
+## Product scope
+
+- New standalone repository with genuine chronological Git history.
+- English homepage as default locale and complete Arabic RTL homepage.
+- Selected real work evidence led by YouIn Guest Review.
+- Dedicated YouIn case-study page is a later phase; its narrative source exists, final page layout is not yet approved.
+- Technical SEO and evidence-led GEO begin with the implemented site, without ranking/citation/revenue promises.
+
+Out of scope without a new owner decision: French, blog, engineering lab, CMS, database, authentication, contact backend, chatbot, extra service offers, general animation system, or generic card-grid redesign.
+
+The old `kanata-system` repository is not a code, asset, architecture, or history dependency.
 
 ## Adopted homepage narrative
 
-Header → hero → mobile bridge where specified → featured YouIn work → exactly two secondary rows (Electro Abidin, ElMoussaif) → Product Rescue → approach → about/capabilities → contact footer.
+Header → Hero → mobile bridge where specified → featured YouIn work → exactly two secondary rows (Electro Abidin, ElMoussaif) → Product Rescue → Approach → About/Capabilities → Contact footer.
 
-Read exact copy from the [paired contract files](design/v1.0/05-implementation/content/en.json), never from generated image text. The primary hero action leads to work; the secondary and Rescue actions lead to contact. The final contact destination is still null.
+Exact approved copy comes from the paired design JSON contracts, not generated preview text. Primary hero action leads to Work; secondary hero and Product Rescue actions lead to Contact. Unresolved destinations remain unresolved.
 
-The calm Forest/Sage/Ivory identity, original outlined wordmark, Inter and IBM Plex Sans Arabic, mobile text-before-photo order and real RTL direction are fixed. The design contract includes numeric values and interactions; a screenshot is not permission to change them.
+## Visual identity
 
-## Evidence and attribution
+Preserve the calm Forest/Sage/Ivory identity, canonical outlined wordmark, local Inter and IBM Plex Sans Arabic, documented tokens/responsive behavior, mobile text-before-photo order, and genuine RTL direction.
 
-Guest Review is the lead example. Its source describes a first-class Review model separated from its access links, review-scoped participation, contextual feedback and history-preserving lifecycle. It records a merged MVP and internal use; those are not evidence of external adoption or commercial improvement.
+Written/numeric design contracts override guesses from screenshots. Screenshots are visual references, not permission to invent copy, values, interactions, or evidence.
 
-Abdelilah led problem framing, product/domain decisions, execution context, implementation direction, review and manual workflow QA. ChatGPT supported reasoning; Codex executed much of the code; Lamar reviewed/accepted the feature according to the recorded account. Do not claim Abdelilah manually authored every line.
+## Evidence model
 
-Electro Abidin and ElMoussaif have concise approved descriptions. Their public presentation still needs real captures. Other historic projects are not automatically new homepage sections. Detailed permissions, claims and evidence levels are in [CONTENT-AND-CLAIMS](CONTENT-AND-CLAIMS.md).
+Do not convert implementation completion, internal use, technical success, or owner acceptance into claims of external adoption, customer growth, revenue, conversion, or commercial impact without primary evidence.
 
-## Decision history and supersession
+Detailed public claim and attribution rules live in `CONTENT-AND-CLAIMS.md`.
 
-| Date | Decision / observation | Authority and effect |
-| --- | --- | --- |
-| 2026-09-06 | ChatGPT project environment verified | Earlier “Phase 0 complete” refers to context setup, not this repository or a built site. |
-| 2026-09-07 | Guest Review source assembled | Narrative, attribution and internal-use evidence; not a public launch. |
-| 2026-09-08 | Homepage design v1.0 documented as adopted | Replaces earlier wireframe concepts for homepage execution. |
-| 2026-09-08 | Owner rejects reuse of the old portfolio repo | New repository and new history override the earlier branch proposal. |
-| 2026-09-08 | Owner fixes the stack and requests Phase 0 documentation | Authorizes the present repository, docs and genuine commits. Does not authorize deployment. |
-| 2026-09-09 | Owner selects `kanata-kan/abdelilah-wajid-portfolio` — Public | Authorizes public repository creation and upload of reviewed repo files; full archives/private notes remain outside Git. Site deployment remains separate. |
+## YouIn Guest Review
 
-The strategy review contains five sensible corrections, applied here as implementation process constraints: hosting provider selection is a release gate; schema must match visible content; tests are staged by risk; Lighthouse is only one diagnostic; 8–12 days is an estimate to revisit after foundation. There is no original `Execution Baseline v1.1` file in the recovered sources; these documents do not pretend one was supplied.
+Guest Review is the lead example. The recorded model includes a first-class Review entity, access links separated from the Review, review-scoped participation, contextual feedback, and history-preserving lifecycle.
 
-## Continuity
+Evidence supports a merged MVP and internal use; it does not prove external adoption or commercial results.
 
-Current repository state is [CURRENT-STATE](CURRENT-STATE.md). Source recency is resolved by dated decisions and provenance, not filename suffix alone. The mirrored September 6 source is stale relative to the later design and owner request. The September 7 local state was also read; the exact September 8 `03-CURRENT-STATE(6).md` mentioned by the strategy was not accessible. Preserve that limitation until reconciled.
+Recorded contribution: Abdelilah led problem framing, product/domain decisions, execution context, implementation direction, review and manual workflow QA. ChatGPT supported reasoning; Codex executed substantial code work; Lamar reviewed/accepted the feature according to the recorded account. Do not claim Abdelilah manually authored every line.
+
+## Secondary work
+
+Electro Abidin and ElMoussaif have approved concise descriptions but still require real public-ready captures. Do not substitute generated proof, unrelated imagery, or invented results. Other historical projects are not automatically homepage sections.
+
+## Source map
+
+- current status/authorization → `CURRENT-STATE.md`
+- authority/conflicts → `SOURCE-OF-TRUTH.md`
+- claims/attribution → `CONTENT-AND-CLAIMS.md`
+- unresolved choices → `OPEN-DECISIONS.md`
+- route/SEO policy → `SEO-GEO.md`
+- architecture → relevant ADR
+- historical verification → relevant `PHASE-*-VERIFICATION.md`
+
+Do not reopen an adopted decision because an older proposal still exists. Resolve genuine conflicts through the documented source hierarchy and latest explicit owner decision.

@@ -1,14 +1,14 @@
 # SEO and GEO execution contract
 
-Updated: 2026-09-09. Owner: Abdelilah Wajid. Technical direction: [ADR-002](architecture/ADR-002-i18n-seo-geo.md). Phase 1 implements and HTTP-tests the EN/AR foundation routes; homepage sections/case pages and release configuration remain planned.
+Updated: 2026-09-11. Owner: Abdelilah Wajid. Technical direction: [ADR-002](architecture/ADR-002-i18n-seo-geo.md). The private EN/AR homepage is implemented and Phase 2 automated checks passed. Case-study routes and release configuration remain later work.
 
-Phase 1 is always private/noindex, even with an optional validated `SITE_ORIGIN`. Without an origin no canonical/alternate/OG URLs are emitted; configured-origin derivation is covered by unit tests. Sitemap is empty and robots disallows crawling. Only the minimal Person schema matching visible identity is emitted; no invented URL/profile/image. Production HTML and assets passed HTTP checks. Actual browser rendering, production origin and final crawler policy remain unverified. See [Phase 1 verification](PHASE-1-VERIFICATION.md).
+The current private implementation remains noindex, even with an optional validated `SITE_ORIGIN`. Without an origin no canonical/alternate/OG URLs are emitted; configured-origin derivation is covered by unit tests. Sitemap is empty and robots disallows crawling. Only the minimal Person schema matching visible identity is emitted; no invented URL/profile/image. Production HTML/assets passed HTTP checks and Phase 2 browser verification exists. Production origin, final crawler policy and actual deployed behavior remain unverified. See [Phase 2 verification](PHASE-2-VERIFICATION.md).
 
 ## Route and destination register
 
 | Page/action | EN | AR | State |
 | --- | --- | --- | --- |
-| Homepage | `/en/` | `/ar/` | Private foundation shell implemented; full homepage deferred to Phase 2 |
+| Homepage | `/en/` | `/ar/` | Private bilingual homepage implemented; not released |
 | Work / Approach / About / Contact | `#work`, `#approach`, `#about`, `#contact` | Same semantic hashes | Adopted per-locale home anchors |
 | Guest Review page | `/en/work/youin-guest-review/` | `/ar/work/youin-guest-review/` | Proposed in S07; source links remain null |
 | Root `/` | Fixed redirect to `/en/` | No automatic geo choice | Proposed; D02 unresolved |
@@ -35,7 +35,7 @@ Reciprocal `en`/`ar` alternatives must reference actual equivalent 200 pages. Th
 
 Sitemap includes only released, canonical, indexable pages. Set `lastmod` from a meaningful content change, not every build. Do not copy handoff archives, raw transcripts or private media to `public/`. Draft case-study routes must remain inaccessible to public indexing until ready.
 
-Search Console, Bing Webmaster Tools, sitemap submission and any IndexNow integration are release tasks requiring the relevant account/domain authority. None is configured in Phase 0. Verify current vendor instructions when enabling them.
+Search Console, Bing Webmaster Tools, sitemap submission and any IndexNow integration are release tasks requiring the relevant account/domain authority. None is claimed configured for production release. Verify current vendor instructions when enabling them.
 
 ## Evidence-led GEO
 

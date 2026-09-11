@@ -1,83 +1,62 @@
 # Abdelilah Wajid — Portfolio
 
-A new portfolio for Abdelilah Wajid, Product Engineer in Marrakech, Morocco. The site will explain his product decisions, engineering work and verification through real work, led by YouIn Guest Review.
+A bilingual portfolio for Abdelilah Wajid, Product Engineer in Marrakech, Morocco. It demonstrates product/engineering judgment through real work, led by YouIn Guest Review.
 
-**Status: Phase 2 private homepage implemented; release inputs remain pending.** `/en/` and `/ar/` provide the adopted bilingual sections, responsive navigation and original identity/fonts. The case study remains Phase 3. There is no deployment. See the dated [verification record](docs/PHASE-1-VERIFICATION.md) for checks and limits. This repository has independent Git history; no application code or history was imported from the previous portfolio.
+**Status:** Phase 2 private EN/AR homepage implemented; automated Phase 2 checks passed; owner review and release inputs remain pending. The case study is still a later phase. No site deployment is claimed.
 
-Public repository: [kanata-kan/abdelilah-wajid-portfolio](https://github.com/kanata-kan/abdelilah-wajid-portfolio), created with the owner's explicit authorization on September 9, 2026. The default branch is `main`.
-
-English is the primary site language. Arabic is a complete second locale with genuine RTL layout. The adopted homepage design and exact bilingual copy are preserved as versioned contracts.
+Public repository: `kanata-kan/abdelilah-wajid-portfolio` (`main`). The repository has independent Git history; no application code/history was imported from the old portfolio.
 
 ## Start here
 
-1. Read [AGENTS.md](AGENTS.md), [project context](docs/PROJECT-CONTEXT.md) and [current state](docs/CURRENT-STATE.md).
-2. Use [source authority](docs/SOURCE-OF-TRUTH.md) to resolve references and conflicts.
-3. Check [open decisions](docs/OPEN-DECISIONS.md) and the [implementation roadmap](docs/IMPLEMENTATION-ROADMAP.md) before extending scope.
+For humans:
 
-For Abdelilah: الصفحة الرئيسية باللغتين موجودة للمعاينة المحلية؛ الصور والروابط النهائية باقية معلّقة، والنشر ما تدارش.
+1. `docs/CURRENT-STATE.md` — current snapshot and next authorized step.
+2. `docs/PROJECT-CONTEXT.md` — stable product intent/scope.
+3. `docs/OPEN-DECISIONS.md` — only active unresolved choices.
 
-## Architecture direction
+For AI/Codex: follow `AGENTS.md`. Do **not** preload every document; it contains the context router and risk-based workflow.
 
-Next.js stable at implementation start, React, strict TypeScript, pnpm, App Router, Server Components by default, static-first public pages, CSS Modules and frozen tokens, local fonts, typed local content and repository-owned MDX for the case study. No CMS, database, monorepo or general animation framework in v1.
+For Abdelilah's cost-aware Codex workflow, see `docs/CODEX-USAGE.md`.
 
-Actual compatible versions are pinned in `package.json`, `.node-version` and `pnpm-lock.yaml`: Node 24.20.0, pnpm 12.3.4, Next 16.3.4, React 19.2.8, TypeScript 6.0.3 and ESLint 9.39.5. [ADR-001](docs/architecture/ADR-001-foundation.md) records the compatibility decision.
+## Architecture
 
-## Repository map
+Pinned project direction: Next.js App Router, React, strict TypeScript, pnpm, Server Components by default, static-first public pages, CSS Modules/frozen tokens, local fonts, typed local content, and repository-owned MDX for the later case study. No CMS/database/general animation framework in v1 without a new decision.
 
-```text
-AGENTS.md                         short execution rules
-assets/brand/                     canonical logo, source paths and selected icons
-docs/
-  architecture/                   three decision records
-  design/v1.0/05-implementation/   exact imported copy, tokens, layout and fonts
-  provenance/                     source and import fingerprints
-  PROJECT-CONTEXT.md              purpose, scope and decision history
-  CURRENT-STATE.md                dated execution handoff
-  SOURCE-OF-TRUTH.md              authority and recovery rules
-  OPEN-DECISIONS.md               owners, consequences and resolution gates
-  CONTENT-AND-CLAIMS.md           evidence, attribution and content rules
-  SEO-GEO.md                     locale URLs, discoverability and migration
-  QA-AND-RELEASE.md               phased checks and release authority
-  AI-EXECUTION-GUIDE.md           working procedure and context checks
-  IMPLEMENTATION-ROADMAP.md       small phases with acceptance criteria
-  ASSET-MANIFEST.md               readiness and exact asset mapping
-  PHASE-0-VERIFICATION.md         verification evidence and limits
-scripts/verify-docs.mjs            dependency-free reference integrity check
-```
+The frozen design package remains under `docs/design/v1.0/05-implementation/` for provenance. Runtime-required contract inputs are mirrored into `src/generated/design-v1/`; application source does not import `docs/` directly. Use `pnpm sync:contract` only after an approved contract revision and `pnpm check:contract` to verify sync/boundary integrity.
 
-Full design boards, original guides, project snapshots and Guest Review evidence are in the separate local `portfolio-reference-materials` handoff, outside this Git repository. A clone does not include those private references. The source guide explains how to restore them before visual implementation.
+Actual compatible versions are pinned in the real repository files. Architecture decisions live in the relevant ADRs.
 
-## Run locally
+## Documentation map
 
-With Node 24.20.0 and pnpm 12.3.4, from the repository root:
+- `AGENTS.md` — short always-loaded execution contract and context router
+- `docs/CURRENT-STATE.md` — hot current snapshot/index
+- `docs/PROJECT-CONTEXT.md` — stable product context
+- `docs/SOURCE-OF-TRUTH.md` — authority/conflict rules
+- `docs/AI-EXECUTION-GUIDE.md` — MEDIUM/LARGE execution method
+- `docs/OPEN-DECISIONS.md` — active unresolved choices only
+- `docs/CONTENT-AND-CLAIMS.md` — claims, evidence and attribution
+- `docs/SEO-GEO.md` — route/search/indexing contract
+- `docs/QA-AND-RELEASE.md` — risk-based QA + full release gates
+- `docs/ASSET-MANIFEST.md` — asset provenance/runtime mapping
+- `docs/IMPLEMENTATION-ROADMAP.md` — sequence, not authorization
+- `docs/PHASE-*-VERIFICATION.md` — cold historical evidence; read only when needed
+- `docs/CODEX-USAGE.md` — human model/prompt/session cost guide
+
+Private design/evidence originals remain outside the public Git repository in the owner-controlled reference handoff.
+
+## Local run
+
+From the real repository root with the pinned toolchain:
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open `http://127.0.0.1:3000/en/` or `http://127.0.0.1:3000/ar/`. `/` intentionally has no route while D02 is unresolved. The homepage includes desktop navigation, a mobile menu and locale switching that preserves the current section hash.
+Open `/en/` or `/ar/` on the local server. Use the repository's real scripts/verification records for the current exact command set; do not infer a passing check from documentation alone.
 
-On this Windows workspace, pinned tools are also installed under ignored `.local/toolchain`. Run `node scripts/pnpm-local.mjs dev` or replace `dev` with any pnpm command. This avoids changing global tools or PowerShell policy. To restore the optional local tools:
+## Quality constraints
 
-```powershell
-npm.cmd install --prefix .local/toolchain --no-save --package-lock=false node@24.20.0 pnpm@12.3.4
-node scripts/pnpm-local.mjs install --frozen-lockfile
-node scripts/pnpm-local.mjs check
-```
+Preserve approved copy/design/tokens/fonts/RTL and canonical brand assets. Never invent business metrics, adoption, testimonials, project imagery, contact details, production origin or deployment/indexing results.
 
-`pnpm check` runs generated types, strict typecheck, lint, source/runtime-asset checks, five focused Node tests, production build and an HTTP smoke test that starts/stops its own server. `pnpm audit --json` checks installed packages against registry advisories. CI runs the same gate with read-only permissions; a workflow file alone is not a hosted CI result.
-
-No environment variables are required locally. Optional `SITE_ORIGIN` must be a verified HTTPS origin; unset means canonical/alternate/OG URLs are omitted. Phase 1 is always noindex, has an empty sitemap and blocks crawlers in robots.txt. An origin alone cannot enable publication/indexing. These measures are not access control; the server binds to loopback by default.
-
-Dictionaries import the frozen JSON directly. `scripts/prepare-layout.mjs` generates a checked runtime stylesheet from the frozen numeric contract, removing only the reference font import and normalizing line endings; `next/font/local` loads the original fonts once. `public/` still contains only four approved identity/icon assets. Case-study MDX remains deferred.
-
-After `pnpm check`, run `pnpm exec playwright install chromium` and `pnpm test:browser`. On this Windows machine, installed Edge can be used without a browser download: `$env:PLAYWRIGHT_CHANNEL='msedge'; node scripts/pnpm-local.mjs test:browser`. Tests use an isolated headless browser and their own server on port 3102; screenshots/traces are ignored under `test-results/`. Hosted CI has not been run. See [Phase 2 verification](docs/PHASE-2-VERIFICATION.md).
-
-## Quality and constraints
-
-Preserve the original SVG wordmark, exact content, design tokens, responsive order and font files. Do not invent business metrics, client adoption, testimonials, project imagery or contact details. The case study must distinguish Abdelilah's decisions, implementation direction and manual QA from AI assistance and team review.
-
-Production portrait, secondary project captures, final destinations, source-version reconciliation and deployment choices remain tracked inputs. Public deployment, DNS changes and spending require explicit authorization. No production URL, screenshot or passing application badge is displayed as proof before it exists.
-
-Code licensing is undecided. [Rights and attribution](RIGHTS.md) separates code, personal brand, third-party product material and font licenses.
+Public deployment, DNS, spending and other external actions require explicit authorization for the concrete action. Code licensing remains undecided; see `RIGHTS.md`.

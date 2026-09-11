@@ -1,64 +1,133 @@
 # QA and release gates
 
-Updated: 2026-09-09. An item is verified only when its actual result is recorded with commit, date, environment and evidence. Not run, unavailable and failed are distinct states. Do not mark a future checklist complete because a source package passed its own validation.
+Updated: 2026-09-11.
 
-## Gate 0 — Repository and documentation
+Verification is risk-based during implementation and complete at milestone/release boundaries. `PASS`, `FAIL`, `NOT RUN`, `UNAVAILABLE`, and `BLOCKED` are distinct states.
 
-- Required documents exist; relative document links resolve.
-- Imported brand/design inputs match original hashes; EN/AR keys and value types agree.
-- Provenance distinguishes available originals, reported evidence and missing exact revisions.
-- New Git root/history, no old-repo history, secrets, raw archive or unrelated user files staged.
-- All null assets/destinations have an owner and stage; historical Phase 0 scope did not authorize application work. Phase 1 was subsequently authorized and verified; the latest owner continuation now authorizes Phase 2 homepage work only.
-- Run `node scripts/verify-docs.mjs`, `git diff --check`, inspect staged files and final history/status. Record limitations in [PHASE-0-VERIFICATION](PHASE-0-VERIFICATION.md).
+A local/feature check does not declare a full gate passed. Never claim a skipped/unavailable check passed.
 
-This gate does not prove exact `(1)` source equivalence, website behavior, media playback or public readiness. D01 must be reconciled before declaring the latest-source intake complete.
+## Verification levels
 
-## Gate 1 — First application foundation
+### LOCAL
+For SMALL changes. Verify only the changed surface plus realistic regression risk. Always run `git diff --check`.
 
-After explicit Phase 1 authorization and required source reconciliation, pin actual compatible runtime/package versions and generate the lockfile. Create genuine scripts and a CI workflow in that phase. No passing badge until a real run exists; no production deployment action or secret required for CI.
+Examples: affected viewport for CSS, targeted test/typecheck for logic, affected keyboard flow for menu behavior.
 
-From a clean dependency installation with the pinned toolchain (the current owner request prohibits another clone): frozen-lockfile install → generated types where needed → `pnpm typecheck` → `pnpm lint` → content/reference validation → `pnpm build`. Verify production start, EN/AR initial HTML, locale root attributes, local font requests, SVG loading and unknown-locale 404. Record package/security audit results against the actual installed versions and resolve material production risks.
+### FEATURE
+For MEDIUM changes spanning a feature/several related files. Run the affected subset of the current gate: targeted tests, relevant type/lint/browser checks, and `git diff --check`.
 
-Use read-only CI permissions, reproducible tooling and no untrusted pull-request secrets. Select current supported CI actions when creating the workflow; no hosted-account setting is assumed already enabled. Do not use an empty test command that always succeeds.
+### GATE
+For phase completion, owner approval, release candidate, or broad change. Run the complete applicable gate and record evidence.
 
-## Gate 2 — Homepage and interaction
+Before a gate is declared complete, run its full required checks even if incremental checks already passed.
 
-| Path / risk | Required checks |
-| --- | --- |
-| Content and visual contract | Exact strings, tokens, local fonts, original logo, required sections, two secondary rows, one H1 and one announced work status |
-| Responsive | EN + AR screenshots at 1024 and 390 after `document.fonts.ready`; inspect 320, 768, 960 and 1440; also 599/600 and 959/960 transitions when affected |
-| Mobile hierarchy | Copy + both actions before portrait; intro → figure → reasoning; continuous page; no board labels or fixed screenshot height |
-| RTL | Correct logical start/end, Arabic wrapping, Latin isolation, directional arrows; unmirrored artwork and product text |
-| Navigation | Brand home, skip link, every section anchor, keyboard traversal, both locale directions with equivalent hash |
-| Menu | Closed initially; open state and aria attributes; visible focus; selection closes; Escape closes and restores toggle focus; no hidden-focus targets or focus trap |
-| Media | Genuine source, correct crop/aspect ratio, no broken assets, reserved dimensions; source-specific caption and alt |
-| Accessibility | Contrast, 200% text zoom, reduced motion, accessible names and touch targets; automated checks plus manual keyboard review |
-| Runtime | No relevant console/hydration error; no unexpected client fetch for main content; inspect shipped JavaScript and unnecessary font/image weight |
+# Gate 0 — Repository and documentation
 
-Introduce focused unit tests for meaningful logic such as route generation, invalid locales and content validation when implemented. Introduce Playwright for navigation, locale switching, CTA and menu flows when those flows exist. Do not build a broad testing platform or chase arbitrary coverage percentages.
+Use for repository/documentation foundation, not routine app edits.
 
-Capture actual browser output for approval. Up to 1 CSS px track rounding is allowed, not arbitrary layout drift. Generated reference defects and font antialiasing are not implementation goals. Missing real assets may stay explicitly labeled in private previews; that does not pass the release gate.
+Full gate:
 
-## Gate 3 — Case study
+- required documents/relative links resolve,
+- imported brand/design inputs match recorded fingerprints,
+- EN/AR key/type parity holds,
+- provenance distinguishes originals/reported evidence/missing revisions,
+- repository history is independent; no old-repo history, secrets, raw archives or unrelated user files staged,
+- unresolved assets/destinations remain explicit.
 
-Review the new page layout in EN/AR. Compare paired MDX with S09 and recorded page assembly. Verify claims, historical counts against primary references, AI/team attribution, source/permission scope and real media playback. Confirm final links, captions, reduced-motion behavior and a still fallback. Ensure the case study is a real indexable page only when released, not a decorative dead link.
+Run `node scripts/verify-docs.mjs`, `git diff --check`, inspect staged files/status/history, and record limits in `PHASE-0-VERIFICATION.md`.
 
-## Gate 4 — Release candidate
+This gate does not prove missing-source equivalence, website behavior, media playback, or public readiness.
 
-Resolve all release-stage open decisions. Obtain the approved portrait, real secondary captures, final contact/profile destinations and approved case-study paths. No placeholder alt presenting mock imagery as fact, no empty `href`, fake address or false-success contact flow. For contact, verify the correct destination and meaningful behavior; sending a real message requires its own explicit authorization.
+# Gate 1 — Application foundation
 
-Re-run a clean production build and critical flow suite. Inspect generated and deployed candidate metadata, hreflang/canonical reciprocity, sitemap, robots, structured data, share image URLs, non-200 paths and redirect map. Test assets, noindex/environment boundaries and keyboard/accessibility manually. No known critical/serious accessibility failures or unresolved material functional/security failures.
+Use when foundation/toolchain/configuration is changed or for full foundation re-verification.
 
-Performance target: median mobile Lighthouse Performance >=90 across three consistent runs is an internal diagnostic, not the sole acceptance criterion. Record settings and inspect LCP element, layout shifts, interaction responsiveness, JavaScript, images and fonts. Field targets at the 75th percentile are LCP <=2.5s, INP <=200ms, CLS <=0.1 by device class, only when enough field data exists. [Web Vitals](https://web.dev/articles/vitals), checked 2026-09-09.
+Full gate from clean pinned tooling:
 
-Record commit, screenshots/results, remaining caveats, host/plan, origin, migration map, production environment requirements and rollback procedure. No final provider, paid plan, DNS record or site connection is approved by this document.
+`frozen install → generated types (if needed) → typecheck → lint → content/reference validation → build`
 
-## Gate 5 — Authorized launch
+Also verify production start, EN/AR initial HTML, `lang`/`dir`, local fonts, canonical SVG loading, unsupported locale 404, and actual dependency/security audit.
 
-Present the concrete release candidate and rollback target to Abdelilah. Obtain explicit authorization for the actual publishing/DNS/spending action, preserving any already granted specific authority. Release only that reviewed state. Recheck production EN/AR, contact destination, 404s, redirects, assets and crawl directives after deployment; retain rollback evidence. Enable external webmaster/measurement services only within their authorized scope.
+CI must use real reproducible checks and safe permissions; an always-successful placeholder test is invalid.
 
-A green CI run is not deployment or verification. A deployment URL is not proof of indexing. Label site release `v1.0.0` only after its actual release; design package v1.0.0 and Phase 0 documents are not that site release.
+During later phases, rerun only the Gate 1 check affected by the change unless foundation risk is broad.
 
-## Result record
+# Gate 2 — Homepage and interaction
 
-For each gate store: commit, date, environment/tool versions, checks run, pass/fail/not-run, evidence location, limitation, reviewer/owner decision and next action. Update [CURRENT-STATE](CURRENT-STATE.md). Do not publish a fresh-chat guidance QA result, CI result, browser screenshot or live test that was never performed.
+## Content / visual contract
+Verify exact approved strings/tokens/fonts/logo/sections, exactly two secondary rows, one H1 and the announced work status when affected. A local section change does not require comparing the entire homepage.
+
+## Responsive
+Incremental visual work: test the affected locale + breakpoint and one nearby breakpoint when regression risk exists.
+
+Full Gate 2 approval:
+
+- capture EN + AR at 1024 and 390 after fonts are ready,
+- inspect 320, 768, 960 and 1440,
+- inspect 599/600 and 959/960 only when the affected CSS uses those transitions.
+
+## Mobile hierarchy
+When relevant verify copy + both actions before portrait, intro → figure → reasoning, continuous page, and no board labels/fixed screenshot height.
+
+## RTL
+When RTL/shared logical layout is affected verify logical start/end, Arabic wrapping, Latin isolation, directional arrows, and unmirrored artwork/product text.
+
+## Navigation / menu
+When affected verify brand home, skip link, section anchors, keyboard traversal, equivalent locale hashes, menu initial/open state, ARIA, focus visibility, selection close, Escape close/focus restore, and no hidden-focus targets/unintended trap.
+
+## Media
+For changed media verify genuine source, intended crop/aspect ratio, load success, reserved dimensions, caption and alt. Do not inspect unrelated media.
+
+## Accessibility
+Incrementally test only affected concerns. Full Gate 2 includes contrast, 200% text/reflow review, reduced motion, accessible names, touch targets, automated checks and manual keyboard review.
+
+## Runtime / tests
+When relevant inspect console/hydration errors, unexpected client fetches, JS impact, and font/image weight. Add focused tests for meaningful logic/flows; do not build a broad testing platform or chase arbitrary coverage.
+
+## Gate 2 approval evidence
+Before declaring Gate 2 complete, run the full applicable checks, capture actual browser output and record limits. Up to 1 CSS px track rounding is acceptable; generated-reference defects/font antialiasing are not implementation targets. Private placeholder media does not satisfy its release requirement.
+
+# Gate 3 — Guest Review case study
+
+Run only when Phase 3 is authorized.
+
+Verify EN/AR page layout, paired MDX against the adopted source, page assembly, claims/counts against appropriate evidence, AI/team attribution, source/permission scope, actual media playback, final links/captions, reduced motion and still fallback.
+
+The case study becomes indexable only when actually released; an unresolved/decorative link is not a release.
+
+# Gate 4 — Release candidate
+
+Run only for an actual release candidate.
+
+Resolve release-stage inputs: real secondary captures, final contact/profile destinations, approved case-study paths, host/origin/rollback target and release policy. No empty/fake destinations, mock imagery presented as fact, or false-success contact behavior.
+
+Run a clean production build and critical flow suite. Inspect candidate metadata, hreflang/canonical reciprocity, sitemap, robots, structured data, share images, non-200 paths, redirects, assets and noindex/environment boundaries. Perform manual keyboard/accessibility review.
+
+No known critical/serious accessibility failure or material functional/security failure may remain unresolved.
+
+### Performance diagnostic
+Median mobile Lighthouse target: `>= 90` across three consistent runs, recorded with settings. Inspect LCP, layout shifts, interaction responsiveness, JavaScript, images and fonts. Field targets (only with sufficient real data): LCP <= 2.5s, INP <= 200ms, CLS <= 0.1. Never invent field data.
+
+Record commit, screenshots/results, caveats, host/plan, origin, migration map, production requirements and rollback procedure. This gate does not itself authorize a provider, paid plan, DNS change or launch.
+
+# Gate 5 — Authorized launch
+
+Present the concrete release candidate and rollback target. Obtain explicit authorization for the actual publish/DNS/spending action unless that exact action is already specifically authorized.
+
+Release only the reviewed state. After deployment verify production EN/AR, contact destination, 404s, redirects, assets and crawl directives; retain rollback evidence. Enable external webmaster/measurement services only within approved scope.
+
+A green CI run is not deployment. A deployment URL is not proof of indexing. Use website release `v1.0.0` only after the actual site release.
+
+# Recording rules
+
+- **LOCAL:** checks run + result + relevant limitation; no full gate record.
+- **FEATURE:** affected feature + relevant checks/result/evidence + blocker/limit.
+- **GATE:** gate, commit, date, environment/tool versions, checks, status, evidence location, limitations, reviewer/owner decision and next action.
+
+Update `CURRENT-STATE.md` only when the result materially changes durable project state.
+
+# Efficiency rules
+
+Prefer the narrowest verification that can catch a realistic regression.
+
+Do not routinely rerun complete gates, unchanged screenshots/locales/breakpoints, full builds, bundle inspections, or old evidence. Expand verification when risk expands; run the full applicable gate before milestone approval/release.
