@@ -8,16 +8,20 @@
     "node": "24.20.0"
   },
   "scripts": {
+    "predev": "node scripts/sync-runtime-contract.mjs --check && node scripts/prepare-layout.mjs --check && node scripts/verify-source-boundary.mjs",
     "dev": "next dev --hostname 127.0.0.1",
+    "prebuild": "node scripts/sync-runtime-contract.mjs --check && node scripts/prepare-layout.mjs --check && node scripts/verify-source-boundary.mjs",
     "build": "next build",
     "start": "next start --hostname 127.0.0.1",
     "typecheck": "next typegen && tsc --noEmit",
     "lint": "eslint . --max-warnings=0",
-    "check:content": "node scripts/verify-docs.mjs && node scripts/verify-runtime-assets.mjs && node scripts/prepare-layout.mjs --check",
+    "check:content": "node scripts/verify-docs.mjs && node scripts/verify-runtime-assets.mjs && node scripts/sync-runtime-contract.mjs --check && node scripts/prepare-layout.mjs --check && node scripts/verify-source-boundary.mjs",
     "test": "node --test tests/foundation.test.ts",
     "test:smoke": "node scripts/smoke.mjs",
     "test:browser": "playwright test",
-    "check": "pnpm typecheck && pnpm lint && pnpm check:content && pnpm test && pnpm build && pnpm test:smoke"
+    "check": "pnpm typecheck && pnpm lint && pnpm check:content && pnpm test && pnpm build && pnpm test:smoke",
+    "sync:contract": "node scripts/sync-runtime-contract.mjs && node scripts/prepare-layout.mjs",
+    "check:contract": "node scripts/sync-runtime-contract.mjs --check && node scripts/prepare-layout.mjs --check && node scripts/verify-source-boundary.mjs"
   },
   "dependencies": {
     "next": "16.3.4",

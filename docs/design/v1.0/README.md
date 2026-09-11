@@ -1,15 +1,52 @@
-# Design v1.0 implementation inputs
+# Design v1.0 contract
 
-`05-implementation/` is a byte-for-byte copy from the recovered AW Portfolio Design v1.0.0 package dated 2026-09-08. It is a reference contract, not an application. Original CSS and TTF files are retained for provenance; Phase 1 should ship only needed WOFF2 weights through a single local-font loading path.
+`05-implementation/` is the byte-preserved implementation contract recovered from AW Portfolio Design v1.0.0 (2026-09-08).
 
-Upstream OFL notices retain their original line endings and trailing spaces. A narrow Git whitespace rule applies only to those two license files; their exact byte hashes are still validated. Authored files use normal whitespace checks.
+It is **immutable source/provenance**, not the runtime application tree.
 
-Read [ADR-003](../../architecture/ADR-003-design-contract.md), then:
+## Read by task
 
-1. [English copy](05-implementation/content/en.json) and [Arabic copy](05-implementation/content/ar.json).
-2. [Tokens](05-implementation/design-tokens.json), [layout contract](05-implementation/layout-contract.css), [fonts](05-implementation/fonts.css).
-3. [Homepage structure](05-implementation/homepage.structure.json), [asset slots](05-implementation/asset-slots.json) and [links](05-implementation/links.json).
+Use only the file that owns the question:
 
-Original-path strings in JSON refer to the complete design package, not this directory. Use [ASSET-MANIFEST](../../ASSET-MANIFEST.md) to resolve them. The complete guide, adoption record and four final views are in the separately delivered local reference material, listed in [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md).
+| Need | Canonical input |
+| --- | --- |
+| EN copy | `05-implementation/content/en.json` |
+| AR copy | `05-implementation/content/ar.json` |
+| colors/spacing/type/breakpoints | `05-implementation/design-tokens.json` |
+| exact CSS numeric/layout contract | `05-implementation/layout-contract.css` |
+| semantic/order contract | `05-implementation/homepage.structure.json` |
+| action/navigation destinations | `05-implementation/links.json` |
+| original media slots | `05-implementation/asset-slots.json` |
+| supplied local fonts | `05-implementation/fonts/` |
 
-Never rewrite an imported file merely to make its paths fit an application. Use an explicit runtime mapping and preserve the source for comparison. A future approved revision receives a new version, change reason and updated provenance; a hash change alone is not approval.
+Do not bulk-read the folder when one source is enough.
+
+## Runtime boundary
+
+Application source under `src/` must not import `docs/` directly.
+
+Runtime-required immutable inputs are mirrored byte-for-byte into:
+
+`src/generated/design-v1/`
+
+with:
+
+`node scripts/sync-runtime-contract.mjs`
+
+The layout CSS is adapted deterministically into:
+
+`src/styles/layout.generated.css`
+
+with:
+
+`node scripts/prepare-layout.mjs`
+
+Run `pnpm check:contract` to verify both mirrors and the `src/` → `docs/` boundary.
+
+Tests/verification scripts may intentionally read these canonical files to compare runtime behavior against the source contract.
+
+## Provenance rule
+
+Never rewrite an imported source merely to make application paths convenient. Approved design/content changes receive a recorded revision; runtime mirrors are then regenerated. Import hashes are not refreshed to hide unexplained differences.
+
+Original package paths and runtime media mappings are documented in [ASSET-MANIFEST](../../ASSET-MANIFEST.md). Authority/conflict rules are in [SOURCE-OF-TRUTH](../../SOURCE-OF-TRUTH.md).

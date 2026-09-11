@@ -84,6 +84,16 @@ try {
     assert.equal(response.status, 200);
     assert.equal(hash(Buffer.from(await response.arrayBuffer())), hash(await readFile(new URL(`../assets/brand/${file}`, import.meta.url))));
   }
+  const media = [
+    '/images/profile/abdelilah-wajid-product-engineer-portrait-mobile.webp',
+    '/images/profile/abdelilah-wajid-product-engineer-portrait-desktop.webp',
+    '/images/work/youin/guest-review-management.webp',
+  ];
+  for (const path of media) {
+    const response = await fetch(`${base}${path}`);
+    assert.equal(response.status, 200, path);
+    assert.equal(hash(Buffer.from(await response.arrayBuffer())), hash(await readFile(new URL(`../public${path}`, import.meta.url))), path);
+  }
   const robots = await get('/robots.txt');
   assert.equal(robots.response.status, 200);
   assert.match(robots.body, /Disallow: \//);
@@ -91,7 +101,7 @@ try {
   assert.equal(sitemap.response.status, 200);
   assert.doesNotMatch(sitemap.body, /<loc>/);
   assert.doesNotMatch(log, /Error:|Hydration failed|Module not found/);
-  console.log(`PASS 6 pending/unknown routes return 404; slash normalization; ${originals.length} original local fonts; 4 byte-exact assets; private robots and empty sitemap.`);
+  console.log(`PASS 6 pending/unknown routes return 404; slash normalization; ${originals.length} original local fonts; 4 byte-exact identity assets; ${media.length} byte-exact media assets; private robots and empty sitemap.`);
 } catch (error) {
   console.error(log);
   throw error;

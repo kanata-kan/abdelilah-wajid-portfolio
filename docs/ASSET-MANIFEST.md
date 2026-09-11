@@ -1,59 +1,73 @@
 # Asset manifest
 
-Updated: 2026-09-09. Every imported repository file is fingerprinted in [imports.json](provenance/imports.json). Original source identities are in [source-index.json](provenance/source-index.json). Original design paths below are package-relative, not assumed public URLs.
+Updated: 2026-09-11.
 
-## Phase 1 runtime mapping — 2026-09-09
+Machine fingerprints for imported source files live in [provenance/imports.json](provenance/imports.json). This file records only current runtime mapping and unresolved media state.
 
-`public/brand/aw-primary-color.svg` copies the canonical lockup byte-for-byte. `public/favicon.svg`, `public/favicon.ico` and `public/apple-touch-icon.png` copy the corresponding originals. `scripts/verify-runtime-assets.mjs` verifies these four copies; the production HTTP smoke test also fetches and compares the served bytes. Intrinsic logo dimensions are the original 1425 × 326, with CSS controlling proportional display size.
+## Runtime contract mapping
 
-`src/styles/fonts.ts` loads the five supplied WOFF2 files directly through next/font/local; the original font-face reference is not loaded a second time. All five generated font URLs were fetched and matched to source bytes. `src/lib/i18n/dictionaries.ts` and `src/styles/globals.css` import canonical copy/layout directly. The existing input inventory below preserves original source paths; its earlier future-use descriptions are superseded by this mapping. No private product media or design boards were copied to public assets.
+The frozen design contract remains under:
 
-## Available, preserved inputs
+`docs/design/v1.0/05-implementation/`
 
-| Asset | Original package path | Repository / usage | Status |
-| --- | --- | --- | --- |
-| Primary lockup | `02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/01-SVG/aw-primary-color.svg` | `assets/brand/aw-primary-color.svg`; future header | Original bytes, ready |
-| Outlined master | `02-brand/Abdelilah-Wajid-Brand-Kit-v1.0/08-Source/aw-master-outlined.svg` | `assets/brand/aw-master-outlined.svg`; source reference | Original bytes, ready |
-| Canonical paths | Brand kit `08-Source/canonical-paths.json` | `assets/brand/canonical-paths.json`; identity validation | Original bytes, ready; not permission to regenerate logo |
-| Icons | Brand kit `05-Web-App/favicon.ico`, `favicon.svg`, `apple-touch-icon.png` | Same filenames in `assets/brand/`; later public asset mapping | Original bytes, not yet wired into an application |
-| Fonts | `05-implementation/fonts/` | `docs/design/v1.0/05-implementation/fonts/` | Exact WOFF2, original TTF and OFL files preserved; production loads required WOFF2 only |
-| Copy/tokens/layout | `05-implementation/` | `docs/design/v1.0/05-implementation/` | Frozen source; not application implementation |
+Application source does not import that directory directly.
 
-Both primary SVG and outlined master SHA-256:
+`scripts/sync-runtime-contract.mjs` mirrors the runtime-required immutable inputs byte-for-byte into `src/generated/design-v1/`:
 
-```text
-E71BACB5D91395338AC862CC82EB225CE7D6F50A3522CC81B8AF0AA5C650BD4F
-```
+- EN/AR content JSON,
+- `links.json`,
+- Inter variable WOFF2,
+- four IBM Plex Sans Arabic WOFF2 weights.
 
-This also matches the mirrored original `aw-primary-color.svg.txt`. The source was copied byte-for-byte; no paths were redrawn or regenerated. Favicon artwork comes from the original kit, never the full lockup shrunk into a tiny icon.
+`scripts/prepare-layout.mjs` adapts the frozen layout CSS into `src/styles/layout.generated.css`, removing only the reference font CSS import because fonts are loaded once through `next/font/local`.
 
-## Reference-only media outside Git
+`pnpm check:contract` verifies the mirror and source boundary.
 
-The separate `portfolio-reference-materials/design/AW-Portfolio-Design-v1.0/` folder contains:
+## Canonical identity assets
 
-- `01-approved-views/home-{en,ar}-{desktop,mobile}.png`: four visually inspected design references. Desktop is 1024×1536; mobile boards are 1470×1070. These contain illustrative imagery and are not website screenshots or product evidence.
-- `03-evidence/01-product-decisions.png`, `02-review-management.png`, `03-guest-experience.png`, `04-contextual-feedback-workflow.gif`, `05-feedback-in-dashboard.png`: source evidence, 1535×742 each. The homepage source is `02-review-management.png`.
-- The original guides/adoption record, Guest Review source, source manifests and archive material needed for provenance. These are not runtime assets and must not be exposed by a static `public/` directory.
+Runtime public assets are byte-identical copies of the approved brand originals:
 
-Product evidence has been located and hash-verified, but this task does not claim fresh behavior verification, privacy clearance of every frame or end-to-end GIF playback. Revalidate selected public media as required by [CONTENT-AND-CLAIMS](CONTENT-AND-CLAIMS.md).
+| Runtime path                        | Canonical source                    |
+| ----------------------------------- | ----------------------------------- |
+| `public/brand/aw-primary-color.svg` | `assets/brand/aw-primary-color.svg` |
+| `public/favicon.svg`                | `assets/brand/favicon.svg`          |
+| `public/favicon.ico`                | `assets/brand/favicon.ico`          |
+| `public/apple-touch-icon.png`       | `assets/brand/apple-touch-icon.png` |
 
-## Unresolved production slots
+`scripts/verify-runtime-assets.mjs` checks their bytes.
 
-| Slot | Current value | Owner input / required acceptance |
-| --- | --- | --- |
-| Portrait | Null; generated person only in design boards | Actual approved Abdelilah photo; crop/consent/currentness and factual alt |
-| Electro Abidin thumbnail | Null | Real inventory/POS screenshot; role/privacy/scope review |
-| ElMoussaif thumbnail | Null | Real transport-site screenshot; role/privacy/currentness review |
-| YouIn preview | Genuine source present, not a newly approved derivative | Confirm framing/currentness; desktop contain, mobile left/top crop; no mirroring/recoloring |
-| Separate YouIn logo | Null | Preserve logo inside genuine capture; separate official vector only if needed and supplied |
-| Share/OG images | No final localized production asset selected | Create from approved real assets/copy only, review and verify actual URL/dimensions |
+The primary/outlining source identity remains immutable; no tracing, recoloring or path regeneration is permitted.
 
-## Import and replacement procedure
+## Approved private-homepage media
 
-1. Resolve a source ID and inspect the exact file. Verify its hash before copying; never substitute a similarly named historical image.
-2. Keep immutable input paths in this manifest. Map the file to a proposed runtime path during Phase 1; no runtime/public placement exists yet.
-3. For image derivatives record source/output hashes, dimensions, crop/redaction, reason, owner approval and verification date. Respect source aspect and intrinsic dimensions to avoid layout shift.
-4. Preserve licenses and attribution. Do not treat a code license as permission for personal or third-party assets.
-5. Verify actual rendered logo, font family/weights, image crop and media playback in both locales. File presence alone does not close that gate.
+| Role             | Runtime path                                                                   | Current source/status                                              |
+| ---------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Portrait mobile  | `public/images/profile/abdelilah-wajid-product-engineer-portrait-mobile.webp`  | approved private-pass derivative, 800×600                          |
+| Portrait desktop | `public/images/profile/abdelilah-wajid-product-engineer-portrait-desktop.webp` | approved private-pass derivative, 1200×800                         |
+| YouIn homepage   | `public/images/work/youin/guest-review-management.webp`                        | derivative of genuine Review Management capture; no mirror/recolor |
 
-Run `node scripts/verify-docs.mjs` to detect accidental imported-file changes. Import hashes must not be refreshed to disguise an unapproved edit. Source PNGs and raw archives remain outside Git; import only genuinely needed production derivatives after scope and rights are resolved.
+Their recorded hashes are pinned by `scripts/verify-runtime-assets.mjs`.
+
+Raw/source evidence stays outside the public runtime and is ignored from Git where documented.
+
+## Unresolved media/release assets
+
+- Electro Abidin capture — not supplied.
+- ElMoussaif capture — not supplied.
+- Final localized share/OG assets — release-stage decision.
+- Separate YouIn logo — use only if an official source is later required/supplied; do not recreate it.
+
+Missing secondary captures remain truthful noninteractive private-preview slots; do not substitute generated or unrelated proof.
+
+## Change procedure
+
+For a new/changed runtime asset:
+
+1. identify the exact source and rights/provenance,
+2. record any derivative crop/redaction/format change,
+3. preserve the canonical source,
+4. update the runtime mapping/hash check,
+5. verify the affected locale/layout only,
+6. run the full applicable media/release gate at milestone/release time.
+
+Do not edit provenance hashes to conceal a changed source.

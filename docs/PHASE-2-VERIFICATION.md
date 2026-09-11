@@ -16,7 +16,9 @@ Starting the review server reintroduced dev-specific `next-env.d.ts` paths (left
 
 ## Evidence and remaining media limits
 
-The actual `03-evidence/02-review-management.png` was inspected locally. It contains internal work-item identifiers and titles, plus the owner's account identity. The original stays outside Git; no crop, redaction, re-creation or publication was performed. Approval of public framing/disclosure/currentness remains needed. The homepage currently uses a labeled neutral slot for YouIn as well as the missing portrait and secondary captures. This is not final media acceptance or visual equivalence to the populated design boards.
+On 2026-09-10 the owner supplied the complete local YouIn evidence set and the approved portrait, then instructed that image assets be organized and completed. Raw evidence is retained in the ignored local `assets/evidence/youin/` directory. The homepage uses a 51,092-byte quality-92 WebP derivative of `02-review-management.png`, with its full 1535 × 742 frame preserved. It contains the previously identified internal work-item identifiers/titles and owner account identity; the current instruction authorizes this local asset integration, while site deployment remains a separate action.
+
+The portrait background was edited with the built-in image tool under the owner's instruction to preserve his face, features and realism while allowing background changes. Visual review caught an excessive crop from the initial 4:5 derivatives, so the final responsive pair now matches the actual slots: 800 × 600 mobile (54,082 bytes) and 1200 × 800 desktop (88,396 bytes), both quality-90 WebP. The likeness was visually reviewed but is not pixel-identical to the supplied photo. Electro Abidin and ElMoussaif captures remain absent and keep truthful labeled slots.
 
 ## Checks
 

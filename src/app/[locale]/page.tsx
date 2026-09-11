@@ -1,10 +1,11 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { getDictionary } from '../../lib/i18n/dictionaries';
 import { isLocale } from '../../lib/i18n/locales';
 import { personSchema, serializeSchema } from '../../lib/seo/metadata';
 import { SiteHeader } from '../../components/site-header';
 import { BidiText } from '../../components/bidi-text';
-import links from '../../../docs/design/v1.0/05-implementation/links.json';
+import links from '../../generated/design-v1/links.json';
 import styles from './page.module.css';
 
 function Arrow() {
@@ -17,7 +18,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const copy = getDictionary(locale);
   // Interface annotations for the private preview, separate from frozen copy.
   const pending = locale === 'ar' ? 'الرابط النهائي قيد الاعتماد' : 'Final destination pending';
-  const imagePending = locale === 'ar' ? 'لقطة المشروع قيد الاعتماد' : 'Project capture pending approval';
+  const secondaryImagePending = locale === 'ar' ? 'لقطة المشروع قيد الاعتماد' : 'Project capture pending approval';
   return <>
     <a className="skip-link" href="#main">{copy.a11y.skipToContent}</a>
     <SiteHeader locale={locale} nav={copy.nav} homeLabel={copy.brand.homeLabel} />
@@ -33,7 +34,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </div>
         <figure>
-          <div className={`portrait ${styles.slot}`}>{locale === 'ar' ? 'مساحة للصورة الشخصية المعتمدة' : 'Approved portrait pending'}</div>
+          <picture>
+            <source media="(max-width: 599px)" srcSet="/images/profile/abdelilah-wajid-product-engineer-portrait-mobile.webp" />
+            <Image className="portrait" src="/images/profile/abdelilah-wajid-product-engineer-portrait-desktop.webp" alt={copy.a11y.portraitFinal} width={1200} height={800} fetchPriority="high" unoptimized />
+          </picture>
           <figcaption className="portrait-caption caption">{copy.hero.location}</figcaption>
         </figure>
       </section>
@@ -46,7 +50,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p className="featured-role small">{copy.work.role}</p>
         </div>
         <figure className="featured-figure">
-          <div className={`youin-preview ${styles.slot}`}><bdi dir="ltr" className="latin">YouIn</bdi><span>{imagePending}</span></div>
+          <Image className="youin-preview" src="/images/work/youin/guest-review-management.webp" alt={copy.a11y.youinPreview} width={1535} height={742} sizes="(max-width: 599px) 100vw, (max-width: 959px) 84vw, 54vw" unoptimized />
           <figcaption className="featured-status-desktop caption">{copy.work.status}</figcaption>
         </figure>
         <div className="featured-reasoning">
@@ -59,7 +63,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <h2 id="other-work-title" className="other-work-title">{copy.otherWork.title}</h2>
         {(['electro', 'elmoussaif'] as const).map((key) => <article className="project-row" key={key}>
           <div><h3><bdi dir="ltr" className="latin">{copy.otherWork[key].name}</bdi></h3><p className="small"><span className="desktop-only"><BidiText>{copy.otherWork[key].description}</BidiText></span><span className="mobile-only"><BidiText>{copy.otherWork[key].descriptionMobile}</BidiText></span></p></div>
-          <div className={`${styles.slot} ${styles.thumbnail}`}>{imagePending}</div>
+          <div className={`${styles.slot} ${styles.thumbnail}`}>{secondaryImagePending}</div>
         </article>)}
       </section>
       <section className="rescue container" aria-labelledby="rescue-title">
@@ -77,7 +81,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     </main>
     <footer id="contact" tabIndex={-1} className="contact">
       <div className="container"><div className="contact-main"><div><h2>{copy.contact.title}</h2><p>{copy.contact.body}</p></div><div><p>{copy.contact.action}</p><p className="caption">{pending}</p></div></div><p className="copyright caption"><BidiText>{copy.contact.copyright}</BidiText></p>
-        <p className={`caption ${styles.preview}`}>{locale === 'ar' ? 'معاينة خاصة — الصور والروابط النهائية قيد الاعتماد.' : 'Private preview — final images and destinations pending approval.'}</p>
+        <p className={`caption ${styles.preview}`}>{locale === 'ar' ? 'معاينة خاصة — صور المشاريع الثانوية والروابط النهائية قيد الاعتماد.' : 'Private preview — secondary project captures and final destinations pending approval.'}</p>
       </div>
     </footer>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeSchema(personSchema(copy.brand)) }} />

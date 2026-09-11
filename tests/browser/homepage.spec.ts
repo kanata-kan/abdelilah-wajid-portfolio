@@ -15,6 +15,14 @@ for (const locale of ['en', 'ar'] as const) {
       await expect(page.locator('html')).toHaveAttribute('dir', copy.direction);
       await expect(page.locator('h1')).toHaveText(copy.hero.title);
       await expect(page.locator('.hero-copy > p').last()).toHaveText(copy.hero.body);
+      await expect(page.locator('.portrait')).toHaveAttribute('alt', copy.a11y.portraitFinal);
+      await expect(page.locator('.youin-preview')).toHaveAttribute('alt', copy.a11y.youinPreview);
+      await expect(page.locator('.portrait, .youin-preview')).toHaveCount(2);
+      await page.locator('.youin-preview').scrollIntoViewIfNeeded();
+      await expect.poll(() => page.locator('.portrait, .youin-preview').evaluateAll((images: HTMLImageElement[]) => images.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
+      expect(await page.locator('.portrait').evaluate((image: HTMLImageElement, expected) => image.currentSrc.includes(expected), width < 600 ? 'portrait-mobile.webp' : 'portrait-desktop.webp')).toBe(true);
+      expect(await page.locator('.portrait').evaluate((element) => getComputedStyle(element).transform)).toBe('none');
+      expect(await page.locator('.youin-preview').evaluate((element) => getComputedStyle(element).transform)).toBe('none');
       await expect(page.locator('.project-row')).toHaveCount(2);
       await expect(page.locator('.project-row a')).toHaveCount(0);
       await expect(page.locator('.mobile-only bdi').first()).toHaveText(copy.work.mobileEyebrow);

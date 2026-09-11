@@ -1,0 +1,111 @@
+{
+  "locale": "en",
+  "direction": "ltr",
+  "meta": {
+    "title": "Abdelilah Wajid — Product Engineer",
+    "description": "Product Engineer based in Marrakech. Product decisions, implementation direction and verification for useful web products."
+  },
+  "brand": {
+    "name": "Abdelilah Wajid",
+    "role": "Product Engineer",
+    "homeLabel": "Abdelilah Wajid — Home"
+  },
+  "nav": {
+    "work": "Work",
+    "approach": "Approach",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "languageEn": "English",
+    "languageAr": "العربية"
+  },
+  "hero": {
+    "eyebrow": "Product Engineer · Marrakech",
+    "title": "I help product teams fix broken workflows and ship new features.",
+    "body": "I understand the problem, make product and technical decisions, and guide the solution through implementation and testing.",
+    "primaryAction": "View my work",
+    "secondaryAction": "Discuss a product problem",
+    "location": "Marrakech, Morocco",
+    "mobileBridge": "Work that shows how I think and build."
+  },
+  "work": {
+    "desktopEyebrow": "01 / Selected work",
+    "desktopTitle": "YouIn — Guest Review",
+    "mobileEyebrow": "YouIn · Guest Review",
+    "mobileTitle": "Website reviews with guests",
+    "description": "From an early feedback prototype to a structured review workflow.",
+    "role": "Product decisions · Domain modeling · Implementation direction · QA",
+    "problemLabel": "The problem",
+    "problem": "The review was tied to a single link.",
+    "decisionLabel": "The decision",
+    "decision": "Separate review identity from the access link.",
+    "resultLabel": "The result",
+    "result": "Manage access while preserving the review context.",
+    "action": "Read the case study",
+    "status": "Merged into the product · Used internally"
+  },
+  "otherWork": {
+    "title": "Other work",
+    "electro": {
+      "name": "Electro Abidin",
+      "description": "Inventory and point of sale · FIFO",
+      "descriptionMobile": "Inventory and point of sale · FIFO"
+    },
+    "elmoussaif": {
+      "name": "ElMoussaif",
+      "description": "Transport website · Four languages · CMS",
+      "descriptionMobile": "Transport website · Four languages · CMS"
+    }
+  },
+  "rescue": {
+    "eyebrow": "Product Rescue",
+    "title": "Something stuck in your product?",
+    "body": "We define a focused scope, diagnose the issue, then implement and verify the change.",
+    "action": "Send me the problem"
+  },
+  "approach": {
+    "title": "From understanding to verification",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Understand",
+        "body": "The problem, context and constraints"
+      },
+      {
+        "number": "02",
+        "title": "Decide & build",
+        "body": "A focused solution and a considered change"
+      },
+      {
+        "number": "03",
+        "title": "Verify",
+        "body": "Real workflows and a clear result"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Abdelilah",
+    "body": "A Product Engineer based in Marrakech. I combine product thinking and technical execution to build useful solutions within real systems.",
+    "capabilitiesTitle": "Where I work",
+    "capabilities": [
+      "Web products",
+      "Operational systems",
+      "Browser extensions"
+    ]
+  },
+  "contact": {
+    "title": "What problem are you working on?",
+    "body": "Send a short description, with a link or screenshot if you have one.",
+    "action": "Let's discuss it",
+    "copyright": "Abdelilah Wajid · 2026"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "portraitPlaceholder": "Illustrative portrait placeholder; replace with Abdelilah’s approved photo before launch.",
+    "portraitFinal": "Abdelilah Wajid",
+    "youinPreview": "YouIn review management: review list, scope, shared marks and participants.",
+    "electroPreview": "Electro Abidin inventory and point-of-sale interface.",
+    "elmoussaifPreview": "ElMoussaif transport website."
+  }
+}

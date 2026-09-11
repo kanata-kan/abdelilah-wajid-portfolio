@@ -1,5 +1,6 @@
 # Local references, credentials, generated output and editor state.
 .local/
+assets/evidence/
 reference-materials/
 handoff/
 .env

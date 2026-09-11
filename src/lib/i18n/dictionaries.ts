@@ -1,12 +1,10 @@
 import 'server-only';
-import en from '../../../docs/design/v1.0/05-implementation/content/en.json';
-import ar from '../../../docs/design/v1.0/05-implementation/content/ar.json';
+import en from '../../generated/design-v1/content/en.json';
+import ar from '../../generated/design-v1/content/ar.json';
 import type { Locale } from './locales';
+import type { Dictionary } from './types';
 
-export type Dictionary = Omit<typeof en, 'locale' | 'direction'> & {
-  locale: string;
-  direction: string;
-};
+export type { Dictionary } from './types';
 
 // Use the frozen sources directly: no second editable copy or fallback locale.
 const dictionaries = { en, ar } satisfies Record<Locale, Dictionary>;

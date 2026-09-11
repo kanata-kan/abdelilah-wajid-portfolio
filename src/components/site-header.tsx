@@ -3,9 +3,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import type { Dictionary } from '../lib/i18n/dictionaries';
+import type { Dictionary } from '../lib/i18n/types';
 import type { Locale } from '../lib/i18n/locales';
-import links from '../../docs/design/v1.0/05-implementation/links.json';
+import links from '../generated/design-v1/links.json';
 
 export function SiteHeader({ locale, nav, homeLabel }: { locale: Locale; nav: Dictionary['nav']; homeLabel: string }) {
   const [open, setOpen] = useState(false);
